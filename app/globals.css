@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+@font-face {
+  font-family: "flyHead";
+  src: url("/fonts/Flyhead/FlyheadRegular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.max-container {
+  @apply mx-auto max-w-[1440px];
+}
+
+.aboutBg {
+  background-image: url("/Images/mainBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+.pricingBg {
+  background-image: url("/Images/pricingBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.BlueGra {
+  background-image: url("/Images/blueAndPink.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.BlueGra2 {
+  background-image: url("/Images/blueAndPink2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.gradient-circle {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(143, 39, 88, 0.432) 10%, rgba(143, 39, 88, 0) 100%);
+  border-radius: 50%;
+  z-index: -10;
+  box-shadow: 0 0 50px rgba(143, 39, 88, 0.13);
+  filter: blur(20px);
+}
+.gradient-circle2 {
+  position: absolute;
+  left: 5px;
+  top: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(143, 39, 88, 0.432) 10%, rgba(143, 39, 88, 0) 100%);
+  border-radius: 50%;
+  z-index: -10;
+  box-shadow: 0 0 50px rgba(143, 39, 88, 0.13);
+  filter: blur(20px);
+}
+.gradient-circle3 {
+  position: absolute;
+  left: 5px;
+  top: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(143, 39, 88, 0.432) 10%, rgba(143, 39, 88, 0) 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(143, 39, 88, 0.13);
+  filter: blur(20px);
+}
+
+
+.mapBg {
+  background-image: url("/Images/mapBg.png");
+  background-size: cover;
+}
+.navbarBody {
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    233.47deg,
+    rgba(27, 27, 92, 0) 59.64%,
+    #1fffa3 95.81%
+  );
+}
+
+.marquee {
+  display: flex;
+  margin: 0 auto;
+  width: 1180px;
+  overflow: hidden;
+  user-select: none;
+}
+
+.marqueeGroup {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  width: max-content;
+  justify-content: start;
+  animation: scrollX 50s linear infinite;
+}
+
+.imaGe {
+  object-fit: contain;
+  width: 80%;
+  margin: 0 20px;
+  height: auto;
+  border-radius: 0.5rem;
+  aspect-ratio: 1/1;
+}
+.imageGroup1 {
+  margin-right: 50px;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 20px 110px;
+  }
+
+  .marquee {
+    width: 90%;
+    margin-right: 5%;
+  }
+
+  .marqueeGroup {
+    flex-shrink: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    width: 1%;
+    justify-content: start;
+    animation: scrollX 15s linear infinite;
+  }
+
+  .imaGe {
+    width: 200%;
+  }
+}
+
+@keyframes scrollX {
+  from {
+    left: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.csBg {
+  background-image: url("/Images/csBg.png");
+  /* background-size: 1440px 1440px; Set the background image size to 600px by 600px */
+  background-size: contain;
+  background-position: center center; /* Center the background image within the div */
+  background-repeat: no-repeat; /* Ensure the background image does not repeat */
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.icons img {
+  width: 50px;
+  height: 50px;
+}
+
+.boxShadowButton {
+  box-shadow: rgba(142, 235, 22, 0.1) 0px 1px 0px;
+}
+
+.outer-wrapper {
+  position: relative;
+  border-radius: 20px; /* Ensure the border-radius is applied here */
+}
+
+.gradient-border {
+  position: relative;
+  background-color: #eeeeee; /* Gray background color */
+  border-radius: 20px; /* Ensure the border-radius is applied here */
+  padding: 80px 10px 0px 40px;
+  height: 503px;
+  z-index: 1; /* Set z-index higher than the pseudo-element */
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  top: -3px; /* Match the border-width */
+  left: -3px; /* Match the border-width */
+  right: -3px; /* Match the border-width */
+  bottom: -3px; /* Match the border-width */
+  border-radius: 23px; /* Adjust for border width (20px + 3px) */
+  background: linear-gradient(
+    to right,
+    #8f2758cc,
+    #ffffff 30%,
+    #ffffff 70%,
+    #8f2758cc
+  );
+  z-index: -1; /* Set z-index lower than the parent element */
+}
+
+.wordSpace {
+  word-spacing: 20px;
+}
+
+@keyframes expandWidth {
+  0% {
+    max-width: 0;
+    opacity: 0;
+  }
+  100% {
+    max-width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes shrinkWidth {
+  0% {
+    max-width: 100%;
+    opacity: 1;
+  }
+  100% {
+    max-width: 0;
+    opacity: 0;
+  }
+}
+
+.animatedText {
+  display: inline-flex;
+  align-items: center; /* Ensure vertical alignment */
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 0; /* initial max-width is zero */
+  opacity: 0; /* initial opacity is zero */
+  transition: max-width 1s ease, opacity 1s ease;
+}
+
+.expand {
+  animation: expandWidth 1s forwards;
+}
+
+.shrink {
+  animation: shrinkWidth 1s forwards;
+}
+
+.navbar {
+  position: relative;
+}
+
+.navbar::before,
+.navbar::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+}
+
+.navbar::before {
+  bottom: 0;
+  left: 0;
+  height: 4px; /* Adjust the height of the bottom border */
+  width: 100%;
+  background: linear-gradient(to right, transparent, #1fffa3);
+}
+
+.navbar::after {
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 4px; /* Adjust the width of the right border */
+  background: linear-gradient(to bottom, transparent, #1fffa3);
+}
+
+.grColor {
+  background: radial-gradient(#8f27589a, transparent);
+  background-size: 90% 120%; /* Adjust the size of the radial gradient */
+  background-repeat: no-repeat;
+}
+
+.wtColor {
+  background: radial-gradient(#6969aa73, transparent) top left,
+    linear-gradient(#000049, #000049);
+  background-size: 100% 100%; /* Adjust the size of the radial gradient */
+}
+
+.glowEffect {
+  box-shadow: 0 0 5px 2px rgba(0, 255, 186, 0.6);
+  transition: box-shadow 0.3s ease-in-out;
+}
+/* .glowEffect:hover {
+  box-shadow: 0 0 15px 5px rgba(0, 255, 186, 0.9);
+} */
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.team-member {
+  position: relative;
+  width: 294px;
+  height: 352px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.team-image {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.team-member:hover .team-image {
+  filter: grayscale(0%);
+}
+
+.info-box {
+  display: none;
+  transition: display 0.3s ease;
+}
+
+.team-member:hover .info-box {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 40px;
+  padding: 10px 20px;
+  width: 260px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Add cursor grabbing effect for drag functionality */
+.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+/* Styles for the dragging state */
+.flexDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+  width: 100%;
+}
+
+.group:hover .svg-path {
+  fill: #00ffba;
+}
+.group2:hover .svg-path2 {
+  fill: #00ffba;
+}
+
+.active-move {
+  transform: translateX(750px); /* Example transformation */
+  transition: transform 0.5s ease; /* Smooth transition */
+}
+
+
+@media (max-width: 480px) {
+  .gradient-border {
+   
+    height: 714px;
+    
+  }
+  .wordSpace {
+    word-spacing: 5px;
+  }
+  .pricingBg {
+    background-image: url("/Images/pricingBgMobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .BlueGra {
+    background-image: url("/Images/blueAndPinkMobile2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .BlueGra2 {
+    background-image: url("/Images/blueAndPinkMobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .csBg {
+    background-image: url("");
+    
+  }
+  .gradient-circle3 {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(143, 39, 88, 0.432) 10%, rgba(143, 39, 88, 0) 100%);
+    border-radius: 50%;
+    z-index: -10;
+    box-shadow: 0 0 50px rgba(143, 39, 88, 0.13);
+    filter: blur(20px);
+  }
+  .team-member:hover .info-box {
+    
+    bottom: 40px;
+   
+  }
+}
+
+
+
