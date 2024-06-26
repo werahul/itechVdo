@@ -63,8 +63,9 @@ const ROICalculator = () => {
     (totalSavingsWithDevBoost - savingsFromInvestmentPrioritization) /
     savingsFromInvestmentPrioritization; //K
 
-  const withoutHiringDeveloper =
-    numDevelopers + devBoostPerformanceGain * numDevelopers; // R
+    const withoutHiringDeveloper =
+    numDevelopers * (numDevelopers + devBoostPerformanceGain); // Revised calculation
+  
 
   const paybackPeriod = totalDevBoostCostPerYear / increasedPerformanceSavings; // real L
   const increasedPerformanceSavingsPerDay = increasedPerformanceSavings / 250; // M
@@ -102,7 +103,7 @@ const ROICalculator = () => {
                 />
               </label>
               <label className="font-inter font-medium leading-[26px] text-[20px]">
-                Average developer cost  per year:
+                Average developer cost per year:
                 <input
                   type="tel"
                   value={devCostPerYear}
@@ -131,10 +132,10 @@ const ROICalculator = () => {
                       onMouseEnter={() => handleMouseEnter(1)}
                       onMouseLeave={handleMouseLeave}
                     >
-                      On average, customers see a 29% increase in teams&apos; ability
-                      to focus on their most pressing work. To be conservative,
-                      we&apos;re assuming you&apos;ll only see 10% of this benefit, but
-                      you should expect to see more.
+                      On average, customers see a 29% increase in teams&apos;
+                      ability to focus on their most pressing work. To be
+                      conservative, we&apos;re assuming you&apos;ll only see 10%
+                      of this benefit, but you should expect to see more.
                     </div>
                   )}
                 </div>
@@ -177,10 +178,10 @@ const ROICalculator = () => {
                     onMouseEnter={() => handleMouseEnter(2)}
                     onMouseLeave={handleMouseLeave}
                   >
-                    On average, customers see a 29% increase in teams&apos; ability
-                    to focus on their most pressing work. To be conservative,
-                    we&apos;re assuming you&apos;ll only see 10% of this benefit, but you
-                    should expect to see more.
+                    On average, customers see a 29% increase in teams&apos;
+                    ability to focus on their most pressing work. To be
+                    conservative, we&apos;re assuming you&apos;ll only see 10%
+                    of this benefit, but you should expect to see more.
                   </div>
                 )}
               </div>
@@ -242,70 +243,68 @@ const ROICalculator = () => {
           </div>
           <div className="bg-white w-[50%] rounded-[20px] max-h-[1490px] py-[64px] px-[44px] text-[#000049] mt-10">
             <p className="font-inter text-[32px] font-bold">Total Savings:</p>
-
             <p className="font-inter text-[56px] font-bold">
-              {" "}
-              {totalSavingsWithDevBoost.toFixed(0)} USD{" "}
+              {typeof totalSavingsWithDevBoost === "number"
+                ? totalSavingsWithDevBoost.toFixed(0) + " USD"
+                : ""}
             </p>
-
             <hr className="my-5" />
+
             <p className="font-inter text-[20px] leading-[26px]">
               Increased Performance Savings: <br />
             </p>
             <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
-              {increasedPerformanceSavings.toFixed(0)} USD{" "}
+              {typeof increasedPerformanceSavings === "number"
+                ? increasedPerformanceSavings.toFixed(0) + " USD"
+                : ""}
             </p>
             <p className="font-inter text-[20px] leading-[26px] mt-5">
               Total savings with DevBoost because of increased efficiency <br />
             </p>
             <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
-              {totalSavings.toFixed(0)} USD
+              {typeof totalSavings === "number"
+                ? totalSavings.toFixed(0) + " USD"
+                : ""}
             </p>
             <p className="font-inter text-[20px] leading-[26px] mt-5">
               Increased efficiency without hiring additional developers <br />
             </p>
             <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
-              {withoutHiringDeveloper.toFixed(0)} USD
+              {typeof withoutHiringDeveloper === "number"
+                ? withoutHiringDeveloper.toFixed(0) + " USD"
+                : ""}
             </p>
             <p className="font-inter text-[20px] leading-[26px] mt-5">
               Savings from investment prioritization
             </p>
             <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
-              {savingsFromInvestmentPrioritization.toFixed(0)} USD
+              {typeof savingsFromInvestmentPrioritization === "number"
+                ? savingsFromInvestmentPrioritization.toFixed(0) + " USD"
+                : ""}
             </p>
 
             <p className="font-inter text-[20px] leading-[26px] mt-5">
               Total DevBoost cost for developers/year
             </p>
             <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
-              {totalDevBoostCostPerYear.toFixed(0)} USD
+              {typeof totalDevBoostCostPerYear === "number"
+                ? totalDevBoostCostPerYear.toFixed(0) + " USD"
+                : ""}
             </p>
             <p className="font-inter text-[20px] leading-[26px] mt-5">
               Reporting overhead savings
             </p>
             <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
-              {reportingOverheadSavingsHours.toFixed(0)} USD
+              {typeof reportingOverheadSavingsHours === "number"
+                ? reportingOverheadSavingsHours.toFixed(0) + " USD"
+                : ""}
             </p>
             <p className="font-inter text-[20px] leading-[26px] mt-5">
               ROI on cost
             </p>
             <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
-              {roi.toFixed(0)} USD
+              {typeof roi === "number" ? roi.toFixed(0) + " USD" : ""}
             </p>
-            {/*<div className="">
-              <p>Payback Period: {paybackPeriod.toFixed(0)} years</p>
-              <p>
-                Increased Performance Savings Per Day: $
-                {increasedPerformanceSavingsPerDay.toFixed(0)}
-              </p>
-              <p>
-                Total Developer Spend Per Day: ${totalDevCostPerDay.toFixed(0)}
-              </p>
-              <p>
-                Payback Period Based on Overall Cost:{" "}
-                {paybackPeriodBasedOnOverallCost.toFixed(0)} years
-              </p>
-            </div>*/}
 
             <hr className="my-5" />
 
@@ -321,15 +320,19 @@ const ROICalculator = () => {
                     Payback Period
                   </p>
                   <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
-                    {paybackPeriod.toFixed(0)} Days
+                    {typeof paybackPeriod === "number"
+                      ? paybackPeriod.toFixed(0) + " Days"
+                      : ""}
                   </p>
                 </div>
                 <div className="">
                   <p className="font-inter text-[20px] leading-[26px] mt-5">
-                    Increased performance  savings per day
+                    Increased performance savings per day
                   </p>
                   <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
-                    {increasedPerformanceSavingsPerDay.toFixed(0)} Days
+                    {typeof increasedPerformanceSavingsPerDay === "number"
+                      ? increasedPerformanceSavingsPerDay.toFixed(0) + " Days"
+                      : ""}
                   </p>
                 </div>
                 <div className="">
@@ -337,7 +340,9 @@ const ROICalculator = () => {
                     Payback period based on overall engineering cost
                   </p>
                   <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
-                    {paybackPeriodBasedOnOverallCost.toFixed(0)} Days
+                    {typeof paybackPeriodBasedOnOverallCost === "number"
+                      ? paybackPeriodBasedOnOverallCost.toFixed(0) + " Days"
+                      : ""}
                   </p>
                 </div>
                 <div className="">
@@ -345,7 +350,9 @@ const ROICalculator = () => {
                     Total developer spend per day
                   </p>
                   <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
-                    {totalDevCostPerDay.toFixed(0)} Days
+                    {typeof totalDevCostPerDay === "number"
+                      ? totalDevCostPerDay.toFixed(0) + " Days"
+                      : ""}
                   </p>
                 </div>
               </div>
