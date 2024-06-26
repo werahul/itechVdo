@@ -131,9 +131,9 @@ const ROICalculator = () => {
                       onMouseEnter={() => handleMouseEnter(1)}
                       onMouseLeave={handleMouseLeave}
                     >
-                      On average, customers see a 29% increase in teams' ability
+                      On average, customers see a 29% increase in teams&apos; ability
                       to focus on their most pressing work. To be conservative,
-                      we're assuming you'll only see 10% of this benefit, but
+                      we&apos;re assuming you&apos;ll only see 10% of this benefit, but
                       you should expect to see more.
                     </div>
                   )}
@@ -177,9 +177,9 @@ const ROICalculator = () => {
                     onMouseEnter={() => handleMouseEnter(2)}
                     onMouseLeave={handleMouseLeave}
                   >
-                    On average, customers see a 29% increase in teams' ability
+                    On average, customers see a 29% increase in teams&apos; ability
                     to focus on their most pressing work. To be conservative,
-                    we're assuming you'll only see 10% of this benefit, but you
+                    we&apos;re assuming you&apos;ll only see 10% of this benefit, but you
                     should expect to see more.
                   </div>
                 )}
