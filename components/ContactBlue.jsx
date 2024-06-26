@@ -22,10 +22,10 @@ const ContactBlue = () => {
 
     emailjs
       .send(
-        "service_b33vbwq", // replace with your service ID
-        "template_voeo1qk", // replace with your template ID
+        "service_8opw6uo", // replace with your service ID
+        "template_rd4umfu", // replace with your template ID
         formData,
-        "hie2Jmqw1rkGHBumz" // replace with your user ID
+        "Y0jI3xOyAMUM4pa4G" // replace with your user ID
       )
       .then(
         (result) => {
@@ -198,7 +198,7 @@ const ContactBlue = () => {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      className="border font-inter lg:text-[16px] text-[14px] px-5 placeholder-[#000049] border-[#000049] rounded-[8px] lg:h-[140px] h-[105px] w-full"
+                      className="border font-inter lg:text-[16px] text-[14px] px-5 placeholder-[#000049] border-[#000049] rounded-[8px] lg:h-[140px] h-[105px] w-full pt-2"
                     />
                   </div>
                 </div>

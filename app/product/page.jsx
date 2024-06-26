@@ -105,7 +105,7 @@ const Page = () => {
         </div>
       </div>
       <DevBoostIntegration />
-      <div className="pt-[156px] px-20">
+      <div className="py-[156px] px-20">
         <div className="text-center font-inter font-normal text-[48px] text-[#000049]">
           How <span className="font-semibold"> DevBoost Works</span>
         </div>
