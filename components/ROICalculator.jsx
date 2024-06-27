@@ -63,9 +63,8 @@ const ROICalculator = () => {
     (totalSavingsWithDevBoost - savingsFromInvestmentPrioritization) /
     savingsFromInvestmentPrioritization; //K
 
-    const withoutHiringDeveloper =
+  const withoutHiringDeveloper =
     numDevelopers * (numDevelopers + devBoostPerformanceGain); // Revised calculation
-  
 
   const paybackPeriod = totalDevBoostCostPerYear / increasedPerformanceSavings; // real L
   const increasedPerformanceSavingsPerDay = increasedPerformanceSavings / 250; // M
@@ -80,6 +79,9 @@ const ROICalculator = () => {
     setDecresedMonthlyReporting(event.target.value);
   };
 
+  const formatNumber = (value) => {
+    return isNaN(value) ? 0 : value.toFixed(0);
+  };
   return (
     <div className="bg-[#000049] py-[124px] px-20">
       <div className="max-container">
@@ -245,8 +247,8 @@ const ROICalculator = () => {
             <p className="font-inter text-[32px] font-bold">Total Savings:</p>
             <p className="font-inter text-[56px] font-bold">
               {typeof totalSavingsWithDevBoost === "number"
-                ? totalSavingsWithDevBoost.toFixed(0) + " USD"
-                : ""}
+                ? formatNumber(totalSavingsWithDevBoost) + " USD"
+                : "0 USD"}
             </p>
             <hr className="my-5" />
 
@@ -255,32 +257,32 @@ const ROICalculator = () => {
             </p>
             <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
               {typeof increasedPerformanceSavings === "number"
-                ? increasedPerformanceSavings.toFixed(0) + " USD"
-                : ""}
+                ? formatNumber(increasedPerformanceSavings) + " USD"
+                : "0 USD"}
             </p>
             <p className="font-inter text-[20px] leading-[26px] mt-5">
               Total savings with DevBoost because of increased efficiency <br />
             </p>
             <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
               {typeof totalSavings === "number"
-                ? totalSavings.toFixed(0) + " USD"
-                : ""}
+                ? formatNumber(totalSavings) + " USD"
+                : "0 USD"}
             </p>
             <p className="font-inter text-[20px] leading-[26px] mt-5">
               Increased efficiency without hiring additional developers <br />
             </p>
             <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
               {typeof withoutHiringDeveloper === "number"
-                ? withoutHiringDeveloper.toFixed(0) + " USD"
-                : ""}
+                ? formatNumber(withoutHiringDeveloper) + " USD"
+                : "0 USD"}
             </p>
             <p className="font-inter text-[20px] leading-[26px] mt-5">
               Savings from investment prioritization
             </p>
             <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
               {typeof savingsFromInvestmentPrioritization === "number"
-                ? savingsFromInvestmentPrioritization.toFixed(0) + " USD"
-                : ""}
+                ? formatNumber(savingsFromInvestmentPrioritization) + " USD"
+                : "0 USD"}
             </p>
 
             <p className="font-inter text-[20px] leading-[26px] mt-5">
@@ -288,22 +290,22 @@ const ROICalculator = () => {
             </p>
             <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
               {typeof totalDevBoostCostPerYear === "number"
-                ? totalDevBoostCostPerYear.toFixed(0) + " USD"
-                : ""}
+                ? formatNumber(totalDevBoostCostPerYear) + " USD"
+                : "0 USD"}
             </p>
             <p className="font-inter text-[20px] leading-[26px] mt-5">
               Reporting overhead savings
             </p>
             <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
               {typeof reportingOverheadSavingsHours === "number"
-                ? reportingOverheadSavingsHours.toFixed(0) + " USD"
-                : ""}
+                ? formatNumber(reportingOverheadSavingsHours) + " USD"
+                : "0 USD"}
             </p>
             <p className="font-inter text-[20px] leading-[26px] mt-5">
               ROI on cost
             </p>
             <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
-              {typeof roi === "number" ? roi.toFixed(0) + " USD" : ""}
+              {typeof roi === "number" ? formatNumber(roi) + " USD" : "0 USD"}
             </p>
 
             <hr className="my-5" />
@@ -321,8 +323,8 @@ const ROICalculator = () => {
                   </p>
                   <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
                     {typeof paybackPeriod === "number"
-                      ? paybackPeriod.toFixed(0) + " Days"
-                      : ""}
+                      ? formatNumber(paybackPeriod) + " Days"
+                      : "0 Days"}
                   </p>
                 </div>
                 <div className="">
@@ -331,8 +333,8 @@ const ROICalculator = () => {
                   </p>
                   <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
                     {typeof increasedPerformanceSavingsPerDay === "number"
-                      ? increasedPerformanceSavingsPerDay.toFixed(0) + " Days"
-                      : ""}
+                      ? formatNumber(increasedPerformanceSavingsPerDay) + " USD"
+                      : "0 USD"}
                   </p>
                 </div>
                 <div className="">
@@ -341,8 +343,8 @@ const ROICalculator = () => {
                   </p>
                   <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
                     {typeof paybackPeriodBasedOnOverallCost === "number"
-                      ? paybackPeriodBasedOnOverallCost.toFixed(0) + " Days"
-                      : ""}
+                      ? formatNumber(paybackPeriodBasedOnOverallCost) + " Days"
+                      : "0 Days"}
                   </p>
                 </div>
                 <div className="">
@@ -351,8 +353,8 @@ const ROICalculator = () => {
                   </p>
                   <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
                     {typeof totalDevCostPerDay === "number"
-                      ? totalDevCostPerDay.toFixed(0) + " Days"
-                      : ""}
+                      ? formatNumber(totalDevCostPerDay) + " USD"
+                      : "0 USD"}
                   </p>
                 </div>
               </div>
