@@ -2,7 +2,7 @@ import React from "react";
 
 const PricingPlan = () => {
   return (
-    <div className="bg-[#F5F3F6] lg:mt-[150px] lg:py-[104px] py-20 lg:my-0 my-20 lg:px-20 px-5">
+    <div className="bg-[#F5F3F6] lg:mt-[150px] lg:py-[104px] py-20 lg:my-0 my-20 lg:px-00 px-5">
       <section className=" lg:block hidden max-container">
         <div className="text-center font-inter font-semibold text-[48px] text-[#000049]">
           Plan Details
@@ -341,162 +341,404 @@ const PricingPlan = () => {
         </div>
       </section>
 
-      <section className="mt-[00px] lg:hidden block ">
-        <div className="font-inter font-semibold text-[28px] text-[#000049]">
+      <section className="mt-[00px] lg:hidden block text-[#000049]">
+        <div className="font-inter font-semibold text-[28px] ">
           Plan Details
         </div>
-        <div className="font-inter overflow-x-scroll sm:overflow-x-auto w-full  sm:w-full space-y-2 lg:hidden block">
-          <div className="flex justify-between items-center mb-4  py-4 px-2 w-[650px] sm:w-full text-xl font-bold font-aileron text-white border-b-2 border-white">
+        <div className="font-inter overflow-x-scroll sm:overflow-x-auto w-full  sm:w-full space-y-2 lg:hidden block mt-4">
+          <div className="flex justify-between items-center mb-0  py-4 px-0 w-[950px] sm:w-full text-xl font-semibold font-inter">
             <p className="w-[335px]">Features</p>
-            <p className="">3 Months</p>
-            <p className="">1 Year</p>
-            <p className="">3 Years</p>
+            <p className="">Freemium</p>
+            <p className="">Fast-Growing Teams</p>
+            <p className="">Enterprises</p>
           </div>
-          <div className="flex justify-between items-center bg-gray-700 py-4 px-2 pr-7 w-[650px] sm:w-full text-xl font-medium font-aileron text-white">
-            <p className="w-[335px]">↠ NeoTrader Pro</p>
-            <img
-              src="/images/pricing-page/tick.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
-            <img
-              src="/images/pricing-page/tick.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
-            <img
-              src="/images/pricing-page/tick.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
+
+          <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
+            <p className="w-[430px]">• Users (Up to)</p>
+            <div className="flex items-center space-x-[200px]">
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+            </div>
           </div>
-          <div className="flex justify-between items-center  py-4 px-2 pr-7 w-[650px] sm:w-full text-xl font-medium font-aileron text-white">
-            <p className="w-[335px]">↠ Q&amp;A Sessions on NeoTrader</p>
-            <img
-              src="/images/pricing-page/tick.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
-            <img
-              src="/images/pricing-page/tick.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
-            <img
-              src="/images/pricing-page/tick.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
+          <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
+            <p className="w-[430px]">• DevOps metrics </p>
+            <div className="flex items-center space-x-[200px]">
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+            </div>
           </div>
-          <div className="flex justify-between items-center bg-gray-700 py-4 px-2 pr-7 w-[650px] sm:w-full text-xl font-medium font-aileron text-white">
-            <p className="w-[335px]">↠ Demos</p>
-            <img
-              src="/images/pricing-page/tick.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
-            <img
-              src="/images/pricing-page/tick.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
-            <img
-              src="/images/pricing-page/tick.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
+          <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
+            <p className="w-[430px]">• Dora metrics </p>
+            <div className="flex items-center space-x-[200px]">
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+            </div>
           </div>
-          <div className="flex justify-between items-center  py-4 px-2 pr-7 w-[650px] sm:w-full text-xl font-medium font-aileron text-white">
-            <p className="w-[335px]">↠ Offers on Training Courses</p>
-            <img
-              src="/images/pricing-page/cross.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
-            <img
-              src="/images/pricing-page/tick.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
-            <img
-              src="/images/pricing-page/tick.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
+          <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
+            <p className="w-[430px]">• Investment profile </p>
+            <div className="flex items-center space-x-[200px]">
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+            </div>
           </div>
-          <div className="flex justify-between items-center bg-gray-700 py-4 px-2 pr-7 w-[650px] sm:w-full text-xl font-medium font-aileron text-white">
-            <p className="w-[335px]">↠ Online Sessions by Dr C K Narayan</p>
-            <img
-              src="/images/pricing-page/cross.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
-            <img
-              src="/images/pricing-page/tick.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
-            <img
-              src="/images/pricing-page/tick.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
+          <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
+            <p className="w-[430px]">• Effort allocation </p>
+            <div className="flex items-center space-x-[200px]">
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+            </div>
           </div>
-          <div className="flex justify-between items-center  py-4 px-2 pr-7 w-[650px] sm:w-full text-xl font-medium font-aileron text-white">
-            <p className="w-[335px]">
-              ↠ Mentoring with Mr. Raja Venkatraman &amp; Mr. Aditya Iyer
+          <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
+            <p className="w-[430px]">
+              • Industry benchmarks <br /> reports 
             </p>
-            <img
-              src="/images/pricing-page/cross.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
-            <img
-              src="/images/pricing-page/tick.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
-            <img
-              src="/images/pricing-page/tick.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
+            <div className="flex items-center space-x-[200px]">
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+            </div>
           </div>
-          <div className="flex justify-between items-center bg-gray-700 py-4 px-2 pr-7 w-[650px] sm:w-full text-xl font-medium font-aileron text-white">
-            <p className="w-[335px]">↠ One-on-one live market support</p>
-            <img
-              src="/images/pricing-page/cross.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
-            <img
-              src="/images/pricing-page/cross.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
-            <img
-              src="/images/pricing-page/tick.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
+          <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
+            <p className="w-[430px]">
+              • Blocker’s breakdown <br /> chart 
+            </p>
+            <div className="flex items-center space-x-[200px]">
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+            </div>
           </div>
-          <div className="flex justify-between items-center  py-4 px-2 pr-7 w-[650px] sm:w-full text-xl font-medium font-aileron text-white">
-            <p className="w-[335px]">↠ Mentoring with Dr. CK Narayan</p>
-            <img
-              src="/images/pricing-page/cross.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
-            <img
-              src="/images/pricing-page/cross.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
-            <img
-              src="/images/pricing-page/tick.png"
-              alt=""
-              className="w-[28px] h-[28px]"
-            />
+          <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
+            <p className="w-[430px]">• Sprint analysis </p>
+            <div className="flex items-center space-x-[200px]">
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+            </div>
+          </div>
+
+          <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
+            <p className="w-[430px]">
+              • AI automation across <br /> delivery, collaboration, <br />{" "}
+              efficiency, process, <br /> and health 
+            </p>
+            <div className="flex items-center space-x-[200px]">
+              <img
+                src="/Images/cross.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/cross.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+            </div>
+          </div>
+          <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
+            <p className="w-[430px]">
+              • Utilisation/ <br />
+              performance Graph 
+            </p>
+            <div className="flex items-center space-x-[200px]">
+              <img
+                src="/Images/cross.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/cross.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+            </div>
+          </div>
+          <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
+            <p className="w-[430px]">
+              • Sprint prediction and <br /> analysis  
+            </p>
+            <div className="flex items-center space-x-[200px]">
+              <img
+                src="/Images/cross.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/cross.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+            </div>
+          </div>
+          <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
+            <p className="w-[430px]">
+              • Team engagement <br /> report 
+            </p>
+            <div className="flex items-center space-x-[200px]">
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+            </div>
+          </div>
+          <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
+            <p className="w-[430px]">
+              • What If scenario <br /> mapping for project <br /> delivery
+              /task delivery  
+            </p>
+            <div className="flex items-center space-x-[200px]">
+              <img
+                src="/Images/cross.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/cross.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+            </div>
+          </div>
+          <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
+            <p className="w-[430px]">
+              • Benchmarking team <br /> across sprints 
+            </p>
+            <div className="flex items-center space-x-[200px]">
+              <img
+                src="/Images/cross.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+            </div>
+          </div>
+          <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
+            <p className="w-[430px]">
+              • Benchmarking team <br />
+              on the business <br /> alignment and cost <br /> across sprints 
+            </p>
+            <div className="flex items-center space-x-[200px]">
+              <img
+                src="/Images/cross.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+            </div>
+          </div>
+          <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
+            <p className="w-[430px]">• Email reporting  </p>
+            <div className="flex items-center space-x-[200px]">
+              <img
+                src="/Images/cross.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+            </div>
+          </div>
+          <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
+            <p className="w-[430px]">
+              • Intelligent <br /> recommendations    
+            </p>
+            <div className="flex items-center space-x-[200px]">
+              <img
+                src="/Images/cross.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/cross.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+            </div>
+          </div>
+          <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
+            <p className="w-[430px]">
+              • Customer support and <br /> handholding 
+            </p>
+            <div className="flex items-center space-x-[200px]">
+              <img
+                src="/Images/cross.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+              <img
+                src="/Images/tick.png"
+                alt=""
+                className="w-[21px] h-[21px]"
+              />
+            </div>
           </div>
         </div>
       </section>

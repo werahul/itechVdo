@@ -36,7 +36,7 @@ const ROICalculator = () => {
   };
 
   const devBoostCostPerUserPerMonth = 20; // USD //D
-  const devBoostPerformanceGain = 0.1; // 10% C
+  const devBoostPerformanceGain = 10; // 10% C
   // const  = 0.1; // 10% I
 
   // Calculations
