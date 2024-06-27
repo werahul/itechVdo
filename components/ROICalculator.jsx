@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const ROICalculator = () => {
-  const [numDevelopers, setNumDevelopers] = useState(); // A
-  const [devCostPerYear, setDevCostPerYear] = useState(); // B
+  const [numDevelopers, setNumDevelopers] = useState(25); // A
+  const [devCostPerYear, setDevCostPerYear] = useState(10000); // B
   const [improvedPrioritizationGain, setPrioritizationGain] = useState(10); // initial value in percentage
   const [decresedMonthlyReporting, setDecresedMonthlyReporting] = useState(4); // initial value in hrs
   const [visiblePopup, setVisiblePopup] = useState(null);
