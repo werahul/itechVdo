@@ -118,8 +118,8 @@ const ROICalculator = () => {
             <div className="mt-5">
               <div className="space-y-4">
                 <div className="flex items-start space-x-2 relative">
-                  <p className="font-medium font-inter text-[20px] leading-[26px] w-[80%]">
-                    Improved prioritization of engineering investments
+                  <p className="font-medium font-inter text-[20px] leading-[26px] w-[370px] whitespace-nowrap">
+                    Improved prioritization of engineering <br /> investments
                   </p>
                   <img
                     src="/Images/IBtn.png"
@@ -130,7 +130,7 @@ const ROICalculator = () => {
                   />
                   {visiblePopup === 1 && (
                     <div
-                      className="popup1 absolute w-[291px] top-0 right-1 rounded-lg bg-[#D2FFED] p-3 text-[14px] leading-[21px] z-10"
+                      className="popup1 absolute w-[291px] top-6 -right-10 rounded-lg bg-[#D2FFED] p-3 text-[14px] leading-[21px] z-10"
                       onMouseEnter={() => handleMouseEnter(1)}
                       onMouseLeave={handleMouseLeave}
                     >
@@ -176,7 +176,7 @@ const ROICalculator = () => {
                 />
                 {visiblePopup === 2 && (
                   <div
-                    className="popup1 absolute w-[291px] top-2 right-1 rounded-lg bg-[#D2FFED] p-3 text-[14px] leading-[21px] cursor-pointer z-10"
+                    className="popup1 absolute w-[291px] top-6 -right-10 rounded-lg bg-[#D2FFED] p-3 text-[14px] leading-[21px] cursor-pointer z-10"
                     onMouseEnter={() => handleMouseEnter(2)}
                     onMouseLeave={handleMouseLeave}
                   >
@@ -221,11 +221,11 @@ const ROICalculator = () => {
                 alt="i-Button 1"
                 onMouseEnter={() => handleMouseEnter(3)}
                 onMouseLeave={handleMouseLeave}
-                className="cursor-pointer mt-2"
+                className="cursor-pointer mt-1"
               />
               {visiblePopup === 3 && (
                 <div
-                  className="popup3 absolute w-[291px] top-0 right-1 rounded-lg bg-[#D2FFED] p-3 text-[14px] leading-[21px] z-10"
+                  className="popup3 absolute w-[291px] top-6 -right-10 rounded-lg bg-[#D2FFED] p-3 text-[14px] leading-[21px] z-10"
                   onMouseEnter={() => handleMouseEnter(3)}
                   onMouseLeave={handleMouseLeave}
                 >
