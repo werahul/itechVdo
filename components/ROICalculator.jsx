@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { NumberFormatBase } from "react-number-format";
 
 const ROICalculator = () => {
   const [numDevelopers, setNumDevelopers] = useState(30); // A
@@ -91,24 +92,34 @@ const ROICalculator = () => {
   };
 
   const formatNumber = (value) => {
-    return isNaN(value) ? 0 : value.toFixed(0);
+    return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
-  const formatNumberWithCommas = (value) => {
-    // Remove all non-numeric characters except for the decimal point
-    const onlyNums = value.replace(/[^0-9]/g, "");
-    return onlyNums.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  const handleInputChange = (e, setState) => {
+    const value = e.target.value.replace(/,/g, "");
+    setState(value);
+    e.target.value = formatNumber(value);
   };
 
-  const handleNumDevelopersChange = (e) => {
-    const formattedValue = formatNumberWithCommas(e.target.value);
-    setNumDevelopers(formattedValue);
-  };
+  // const formatNumber = (value) => {
+  //   return isNaN(value) ? 0 : value.toFixed(0);
+  // };
 
-  const handleDevCostPerYearChange = (e) => {
-    const formattedValue = formatNumberWithCommas(e.target.value);
-    setDevCostPerYear(formattedValue);
-  };
+  // const formatNumberWithCommas = (value) => {
+  //   // Remove all non-numeric characters except for the decimal point
+  //   const onlyNums = value.replace(/[^0-9]/g, "");
+  //   return onlyNums.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  // };
+
+  // const handleNumDevelopersChange = (e) => {
+  //   const formattedValue = formatNumberWithCommas(e.target.value);
+  //   setNumDevelopers(formattedValue);
+  // };
+
+  // const handleDevCostPerYearChange = (e) => {
+  //   const formattedValue = formatNumberWithCommas(e.target.value);
+  //   setDevCostPerYear(formattedValue);
+  // };
 
   return (
     <div className="bg-[#000049] lg:py-[124px] py-20 lg:px-20 px-5">
@@ -127,18 +138,18 @@ const ROICalculator = () => {
                 Number of developers in your organization:
                 <input
                   type="tel"
-                  value={numDevelopers}
+                  value={formatNumber(numDevelopers)}
                   className="w-full border border-[#000049] h-[64px] rounded-lg px-5 mt-4"
-                  onChange={handleNumDevelopersChange}
+                  onChange={(e) => handleInputChange(e, setNumDevelopers)}
                 />
               </label>
               <label className="font-inter font-medium lg:leading-[26px] lg:text-[20px] text-[16px] leading-[20px]">
                 Average developer cost per year:
                 <input
                   type="tel"
-                  value={devCostPerYear}
+                  value={formatNumber(devCostPerYear)}
                   className="w-full border border-[#000049] h-[64px] rounded-lg px-5 mt-4"
-                  onChange={handleDevCostPerYearChange}
+                  onChange={(e) => handleInputChange(e, setDevCostPerYear)}
                 />
               </label>
             </div>
@@ -363,7 +374,7 @@ const ROICalculator = () => {
                     Payback Period on Perfomance Saving
                   </p>
                   <p className="font-inter lg:text-[32px] text-[24px] lg:leading-[32px] leading-[24px] font-bold mt-2">
-                    {paybackPeriod} Days
+                    {Math.floor(paybackPeriod)} Days
                   </p>
                 </div>
                 {/*<div className="">
