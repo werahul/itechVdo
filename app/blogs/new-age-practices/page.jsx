@@ -1,35 +1,39 @@
-"use client"
+"use client";
 import Cta from "@/components/Cta";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import NavbarMobile from "@/components/NavbarMobile";
 import React, { useEffect } from "react";
 
 const Page = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    
   }, []);
   return (
-
     <div>
       <Navbar />
+      <NavbarMobile />
       <section>
-        <div className="pricingBg w-full h-[889px] rounded-b-[80px] px-20 pt-[300px] z-10 ">
-          <p className="tracking-wide font-bold font-flyHead text-[64px] leading-[74px] text-[#ffffff] text-center uppercase">
+        <div className="pricingBg w-full lg:h-[889px] h-[400px] lg:rounded-b-[80px] rounded-b-[40px] lg:px-20 px-5 lg:pt-[300px] pt-[50px] z-10 ">
+          <p className="tracking-wide font-bold font-flyHead lg:text-[64px] text-[32px] lg:leading-[74px] leading-[42px] text-[#ffffff] text-center uppercase">
             New-age Practices: Engineering <br /> Investment and Business
             Alignment
           </p>
-          <p className="font-inter font-normal text-[18px] leading-[23.4px] text-[#ffffff] text-center mt-5">
+          <p className="font-inter font-normal lg:text-[18px] text-[16px] leading-[23.4px] text-[#ffffff] text-center mt-5">
             How DevBoost helps clients move towards data-driven conversations.
           </p>
         </div>
-        <div className="px-20 flex items-start justify-center -mt-[340px]  max-container ">
+        <div className="lg:px-20 px-5 flex items-start justify-center lg:-mt-[340px] -mt-[70px]  max-container ">
           <img src="/Images/newAgeBlogImg.png" alt="New Age" className="" />
         </div>
       </section>
-      <section className="py-[140px] px-20 max-container">
+      <section className="lg:py-[140px] py-20 lg:px-20 px-5 max-container">
         <div className="flex items-center space-x-5">
-          <img src="/Images/blogProfile.png" alt="blogProfile" className=""/>
+          <img
+            src="/Images/blogProfile.png"
+            alt="blogProfile"
+            className="lg:w-auto w-[64px]"
+          />
           <div className=" ">
             <p className="font-inter font-semibold text-[24px] text-[#000049]">
               John Doe
@@ -41,7 +45,7 @@ const Page = () => {
         </div>
 
         <div className="mt-[48px]">
-          <p className="font-inter text-[18px] leading-[27px] text-[#000049]">
+          <p className="font-inter lg:text-[18px] text-[16px] lg:leading-[27px] leading-[21px] text-[#000049]">
             In today’s competitive market, engineering teams are under immense
             pressure to deliver high-quality products quickly and efficiently.
             However, ensuring that these engineering investments align with
@@ -69,11 +73,11 @@ const Page = () => {
             strategies and priorities as needed.
           </p>
         </div>
-        <div className="mt-[56px]">
-          <p className="font-inter text-[48px] leading-[58px] text-[#000049] mb-6">
+        <div className="lg:mt-[56px] mt-[44px]">
+          <p className="font-inter lg:text-[48px] lg:leading-[58px] lg:font-normal font-semibold  text-[20px] leading-[30px] text-[#000049] lg:mb-6 mb-4">
             Driving Data-Driven Decision Making
           </p>
-          <p className="font-inter text-[18px] leading-[27px] text-[#000049]">
+          <p className="font-inter lg:text-[18px] text-[16px] lg:leading-[27px] leading-[21px] text-[#000049]">
             Data-driven decision-making is essential for optimizing engineering
             investments. DevBoost empowers teams to make informed decisions by
             providing actionable insights derived from comprehensive data
@@ -97,11 +101,11 @@ const Page = () => {
           </p>
         </div>
 
-        <div className="mt-[56px]">
-          <p className="font-inter text-[48px] leading-[58px] text-[#000049] mb-6">
+        <div className="lg:mt-[56px] mt-[44px]">
+          <p className="font-inter lg:text-[48px] lg:leading-[58px] lg:font-normal font-semibold  text-[20px] leading-[30px] text-[#000049] lg:mb-6 mb-4">
             Enhancing Collaboration and Accountability
           </p>
-          <p className="font-inter text-[18px] leading-[27px] text-[#000049]">
+          <p className="font-inter lg:text-[18px] text-[16px] lg:leading-[27px] leading-[21px] text-[#000049]">
             Effective collaboration between engineering and business teams is
             crucial for aligning investments with business goals. DevBoost
             enhances collaboration by providing tools that facilitate seamless
@@ -126,11 +130,11 @@ const Page = () => {
           </p>
         </div>
 
-        <div className="mt-[56px]">
-          <p className="font-inter text-[48px] leading-[58px] text-[#000049] mb-6">
+        <div className="lg:mt-[56px] mt-[44px]">
+          <p className="font-inter lg:text-[48px] lg:leading-[58px] lg:font-normal font-semibold  text-[20px] leading-[30px] text-[#000049] lg:mb-6 mb-4">
             Conclusion
           </p>
-          <p className="font-inter text-[18px] leading-[27px] text-[#000049]">
+          <p className="font-inter lg:text-[18px] text-[16px] lg:leading-[27px] leading-[21px] text-[#000049]">
             Aligning engineering investments with business goals is a complex
             but essential task for modern enterprises. DevBoost simplifies this
             process by providing a platform that promotes transparent

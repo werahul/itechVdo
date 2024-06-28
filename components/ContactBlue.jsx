@@ -85,15 +85,12 @@ const ContactBlue = () => {
                     />
                   </div>
                   <div className="font-inter lg:text-[18px] text-[14px] text-white">
-                    <a href="mailto:tushar.doshi@itechgenicglobal.com">
-                      <p>Tushar.doshi@itechgenicglobal.com</p>
-                    </a>
-                    <a href="mailto:aninda.mukherjee@itechgenicglobal.com">
-                      <p>Aninda.mukherjee@itechgenicglobal.com</p>
+                    <a href="mailto:info@devboost.co">
+                      <p>info@devboost.co</p>
                     </a>
                   </div>
                 </div>
-                <div className="flex items-center lg:space-x-4 space-x-[6px]">
+                {/*<div className="flex items-center lg:space-x-4 space-x-[6px]">
                   <div className="">
                     <img
                       src="/Images/phoneIcon.png"
@@ -109,7 +106,7 @@ const ContactBlue = () => {
                       <span> +65 9633 6714</span>,
                     </a>
                   </div>
-                </div>
+                </div>*/}
                 <div className="flex items-center lg:space-x-4 space-x-[6px]">
                   <div className="">
                     <img
@@ -220,7 +217,7 @@ const ContactBlue = () => {
           </p>
 
           <div className="mapBg lg:block hidden lg:w-[100%] mt-6 lg:mt-9  p-8 mx-auto h-[500px] lg:rounded-[8px] ">
-            <div className="bg-[#000049] text-white hidden  lg:space-x-10 justify-between lg:flex flex-col lg:flex-row lg:w-[461px] p-6 lg:rounded-[8px] ">
+            <div className="bg-[#000049] text-white hidden  lg:space-x-10 justify-between lg:flex flex-col lg:flex-row lg:w-[461px] px-6 py-10 lg:rounded-[8px] ">
               <a
                 href="https://www.google.com/maps/dir//1+Marina+Blvd,+Level+20,+Singapore+018989/@1.2821991,103.7702493,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x31da19d2163f639f:0x251b930f8b4bce85!2m2!1d103.8526418!2d1.2821856?entry=ttu"
                 target="_blank"
@@ -231,14 +228,14 @@ const ContactBlue = () => {
                   <p>
                     1 Marina Blvd, Level 20, Singapore <br /> 018989
                   </p>
-                  <p className="text-xl flex items-center space-x-2">
+                  {/*<p className="text-xl flex items-center space-x-2">
                     <span>4.2</span>{" "}
                     <img
                       src="/Images/ratings.png"
                       alt="4 stars"
                       className="w-[68px]"
                     />
-                  </p>
+                  </p>*/}
 
                   <button className="underline text-white font-medium cursor-pointer">
                     View larger map
@@ -269,19 +266,19 @@ const ContactBlue = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="space-y-3  bg-[#000049] w-[314px] rounded-[5px] text-white p-3 relative">
+                <div className="space-y-3  bg-[#000049] w-[314px] rounded-[5px] text-white px-3 py-5 relative">
                   <h3 className="font-bold text-lg lg:text-2xl ">DevBoost</h3>
                   <p className="text-[12px] lg:text-base w-[70%]">
                     1 Marina Blvd, Level 20, Singapore <br /> 018989
                   </p>
-                  <p className="text-xl flex items-center space-x-2">
+                  {/*<p className="text-xl flex items-center space-x-2">
                     <span>4.2</span>{" "}
                     <img
                       src="/Images/ratings.png"
                       alt="4 stars"
                       className="w-[68px]"
                     />
-                  </p>
+                  </p>*/}
                   <button className="underline text-[12px] lg:text-base text-[#ffffff] font-medium cursor-pointer">
                     View larger map
                   </button>

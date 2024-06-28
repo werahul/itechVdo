@@ -71,11 +71,7 @@ const HomeBlue = () => {
           <br /> WITH DEVBOOST
         </p>
         <p className="font-inter font-normal lg:text-[18px] leading-[23.4px] text-[#ffffff] text-center mt-5">
-          DevBoost is an all-in-one engineering intelligence tool that provides
-          precise predictive <br className="lg:block hidden" /> analysis,
-          forecasts, personalized recommendations and actionable insights to
-          mitigate risks <br className="lg:block hidden" /> and boost
-          productivity across tech verticals.
+          DevBoost is an Ai based, Data-Driven platform for Faster, <br className="lg:block hidden"/> Smarter and Risk-Free Software Development.
         </p>
         <div className="flex justify-center items-center">
           <Link href="/contact">

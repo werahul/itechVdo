@@ -138,7 +138,7 @@ const Page = () => {
           <div className="space-y-[70px]">
             <div className="flex items-center space-x-5 relative">
               <div className="w-[50%]">
-                <img src="/Images/pm1.png" alt="Usp1" />
+                <img src="/Images/pm3.png" alt="Usp1" />
               </div>
               <div className="w-[50%] space-y-4">
                 <p className="font-inter font-semibold text-[32px] leading-[41px] text-[#000049]">
@@ -198,7 +198,7 @@ const Page = () => {
 
             <div className="flex items-center space-x-5 relative">
               <div className="w-[50%]">
-                <img src="/Images/pm3.png" alt="pm3" />
+                <img src="/Images/pm1.png" alt="pm3" />
               </div>
               <div className="w-[50%] space-y-4">
                 <p className="font-inter font-semibold text-[32px] leading-[41px] text-[#000049]">

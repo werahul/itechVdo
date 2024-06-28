@@ -1,6 +1,7 @@
 "use client"
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import NavbarMobile from "@/components/NavbarMobile";
 import React, { useEffect } from "react";
 
 const Page = () => {
@@ -11,19 +12,20 @@ const Page = () => {
   return (
     <div>
       <Navbar />
+      <NavbarMobile/>
       <section>
-        <div className="pricingBg w-full h-[580px] rounded-b-[80px] px-20 pt-[300px] z-10 ">
-          <p className="tracking-wide font-normal font-flyHead text-[64px] leading-[74px] text-[#ffffff] text-center uppercase">
+        <div className="pricingBg w-full lg:h-[580px] h-[205px] lg:rounded-b-[80px] rounded-b-[80px] lg:px-20 px-5 lg:pt-[300px] pt-[50px] z-10 ">
+          <p className="tracking-wide font-normal font-flyHead lg:text-[64px] lg:leading-[74px] text-[32px] leading-[42px] text-[#ffffff] text-center uppercase">
             Privacy Policy
           </p>
         </div>
       </section>
       <div className="max-container">
-        <div className="text-[#000049] font-inter px-20 pt-20">
-          <p className="font-semibold text-[24px]">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 lg:pt-20 pt-[56px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">
             DevBoost Platform And Data Usage
           </p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -69,11 +71,11 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">
             DevBoost Use Of Personal Data And GDPR Compliance
           </p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -106,11 +108,11 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px] pb-[156px]">
-          <p className="font-semibold text-[24px]">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px] lg:pb-[156px] pb-20">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">
             When DevBoost Is Used By The Client
           </p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>

@@ -121,10 +121,7 @@ const faqs = [
   },
 ];
 
-
 const ProductFaq = () => {
- 
-
   const [openIndex, setOpenIndex] = useState(0);
   const [showAll, setShowAll] = useState(false);
 
@@ -140,28 +137,28 @@ const ProductFaq = () => {
   const displayedFaqs = showAll ? faqs : faqs.slice(0, 5);
 
   return (
-    <div className="pb-[156px] px-20 max-container">
-      <p className="text-center font-inter font-semibold text-[48px] text-[#000049]">
-      FAQs
+    <div className="lg:pb-[156px] pb-20 lg:px-20 px-5 max-container">
+      <p className="lg:text-center font-inter font-semibold lg:text-[48px] text-[28px] text-[#000049]">
+        FAQs
       </p>
 
-      <div className="mt-10">
+      <div className="lg:mt-10 mt-8">
         {displayedFaqs.map((faq, index) => {
           const isOpen = openIndex === index;
           return (
             <div
               key={index}
               onClick={() => toggleAccordion(index)}
-              className={`w-full h-auto py-10 px-8 border border-[#000049] rounded-lg flex justify-between mb-7 transition-opacity duration-300 cursor-pointer ${
+              className={`w-full h-auto lg:py-10 py-5 lg:px-8 px-5 border border-[#000049] rounded-lg flex justify-between mb-7 transition-opacity duration-300 cursor-pointer ${
                 isOpen ? "opacity-100" : "opacity-70"
               }`}
             >
-              <div className="w-[70%]">
-                <p className="questions font-inter font-semibold text-[24px] text-[#000049]">
+              <div className="lg:w-[70%] w-[90%]">
+                <p className="questions font-inter font-semibold lg:text-[24px] text-[18px] leading-[27px] text-[#000049]">
                   {faq.question}
                 </p>
                 {isOpen && (
-                  <div className="answer font-inter text-[18px] leading-[27px] text-[#000049] opacity-90 mt-3">
+                  <div className="answer font-inter lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] text-[#000049] opacity-90 mt-3">
                     {faq.answer.map((paragraph, i) => (
                       <p key={i} className="mt-3">
                         {paragraph}
@@ -173,7 +170,7 @@ const ProductFaq = () => {
               <div>
                 <div
                   onClick={(event) => handleIconClick(event, index)}
-                  className={`w-[50px] h-[50px] rounded-full border border-[#000049] flex items-center justify-center cursor-pointer ${
+                  className={`lg:w-[50px] lg:h-[50px] w-[32px] h-[32px] rounded-full border border-[#000049] flex items-center justify-center cursor-pointer ${
                     isOpen ? "bg-[#000049]" : ""
                   }`}
                 >
@@ -184,6 +181,7 @@ const ProductFaq = () => {
                         : "/Images/downFaqIcon.png"
                     }
                     alt="Toggle FAQ"
+                    className="lg:w-auto w-[10px]"
                   />
                 </div>
               </div>
@@ -195,7 +193,7 @@ const ProductFaq = () => {
       {!showAll && (
         <div className="flex items-center justify-center mt-[48px]">
           <button
-            className="mt-0 rounded-[8px] font-inter text-[20px] hover:bg-[#000049] hover:text-[#1FFFA3] text-[#000049] font-semibold w-[159px] h-[60px] border border-[#000049]"
+            className="mt-0 rounded-[8px] font-inter text-[20px]  hover:bg-[#000049] hover:text-[#1FFFA3] text-[#000049] font-semibold lg:w-[159px] w-[143px] lg:h-[60px] h-[56px] border border-[#000049]"
             onClick={() => setShowAll(true)}
           >
             View All

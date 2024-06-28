@@ -1,27 +1,28 @@
-"use client"
+"use client";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import NavbarMobile from "@/components/NavbarMobile";
 import React, { useEffect } from "react";
 
 const Page = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    
   }, []);
   return (
     <div>
       <Navbar />
+      <NavbarMobile />
       <section>
-        <div className="pricingBg w-full h-[580px] rounded-b-[80px] px-20 pt-[300px] z-10 ">
-          <p className="tracking-wide font-normal font-flyHead text-[64px] leading-[74px] text-[#ffffff] text-center uppercase">
+        <div className="pricingBg w-full lg:h-[580px] h-[190px] lg:rounded-b-[80px] rounded-b-[40px] lg:px-20 px-5 lg:pt-[300px] pt-[50px] z-10 ">
+          <p className="tracking-wide font-normal font-flyHead lg:text-[64px] lg:leading-[74px] text-[32px] leading-[42px] text-[#ffffff] text-center uppercase">
             Terms And Conditons
           </p>
         </div>
       </section>
       <div className="max-container">
-        <div className="text-[#000049] font-inter px-20 pt-20">
-          <p className="font-semibold text-[24px]">General Terms of Use</p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-20">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">General Terms of Use</p>
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -91,11 +92,11 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">
             Licence to use our Services
           </p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -129,9 +130,9 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">Signing up to our Site</p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">Signing up to our Site</p>
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -158,9 +159,9 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">Free and Trial Workspaces</p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">Free and Trial Workspaces</p>
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -175,11 +176,11 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">
             Upgrading to a paid subscription
           </p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -196,9 +197,9 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">Payment terms</p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">Payment terms</p>
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -263,9 +264,9 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">Auto-renewal</p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">Auto-renewal</p>
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -277,9 +278,9 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">Upgrading or downgrading</p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">Upgrading or downgrading</p>
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -295,9 +296,9 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">Non-payment</p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">Non-payment</p>
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -311,11 +312,11 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">
             We will protect Customer Data
           </p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -324,7 +325,10 @@ const Page = () => {
                 1. Your personal information as a customer or potential
                 customer, which we refer to as Customer Account Data, and <br />
                 2. The personal information contained within your company’s
-                source systems (e.g. Jira, Bitbucket, Slack), which the DevBoost application uses to provide software development analytics and performance insights. We refer to this data as Source Systeli Data.
+                source systems (e.g. Jira, Bitbucket, Slack), which the DevBoost
+                application uses to provide software development analytics and
+                performance insights. We refer to this data as Source Systeli
+                Data.
               </p>
             </div>
             <div className="flex space-x-0 items-start">
@@ -336,11 +340,11 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">
             How DevBoost processes customer account data
           </p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -384,11 +388,11 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">
             How DevBoost Processes Source System Data
           </p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -402,11 +406,11 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">
             What Source System Data Is Processed
           </p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -436,11 +440,11 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">
             How Long We Store and How To Make Choices About Source System Data
           </p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -470,11 +474,11 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">
             How Long We Store and How To Make Choices About Source System Data
           </p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -500,11 +504,11 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">
             Sharing Your Personal Information
           </p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -517,11 +521,11 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">
             You own and are responsible for your Customer Data
           </p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -575,9 +579,9 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">Warranties</p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">Warranties</p>
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -591,9 +595,9 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">Indemnities</p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">Indemnities</p>
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -627,9 +631,9 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">Limitation of liability</p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">Limitation of liability</p>
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -669,9 +673,9 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">Exclusions to liability</p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">Exclusions to liability</p>
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -704,9 +708,9 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">Termination</p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">Termination</p>
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -753,9 +757,9 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">Disputes</p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">Disputes</p>
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -779,9 +783,9 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">Severability</p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">Severability</p>
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -795,11 +799,11 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">
             We’ll keep the services available
           </p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -815,9 +819,9 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">Changes to the services</p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">Changes to the services</p>
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -837,11 +841,11 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">
             Changes to the customer terms
           </p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -857,9 +861,9 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">Publicity</p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">Publicity</p>
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -878,9 +882,9 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">Your feedback</p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">Your feedback</p>
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -895,11 +899,11 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">
             Relationship of the parties
           </p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -910,9 +914,9 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px]">
-          <p className="font-semibold text-[24px]">Governing law</p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px]">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">Governing law</p>
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>
@@ -922,9 +926,9 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="text-[#000049] font-inter px-20 pt-[48px] pb-[156px]">
-          <p className="font-semibold text-[24px]">Entire agreement</p>
-          <div className="text-[18px] leading-[27px] space-y-4 mt-4">
+        <div className="text-[#000049] font-inter lg:px-20 px-5 pt-[48px] lg:pb-[156px] pb-20">
+          <p className="font-semibold lg:text-[24px] text-[20px] leading-[30px]">Entire agreement</p>
+          <div className="lg:text-[18px] text-[14px] lg:leading-[27px] leading-[21px] space-y-4 mt-4">
             <div className="flex space-x-0 items-start">
               <li className="list-disc w-[15px]"></li>
               <p>

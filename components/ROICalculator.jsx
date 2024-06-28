@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const ROICalculator = () => {
-  const [numDevelopers, setNumDevelopers] = useState(25); // A
-  const [devCostPerYear, setDevCostPerYear] = useState(10000); // B
-  const [improvedPrioritizationGain, setPrioritizationGain] = useState(10); // initial value in percentage
-  const [decresedMonthlyReporting, setDecresedMonthlyReporting] = useState(4); // initial value in hrs
+  const [numDevelopers, setNumDevelopers] = useState(30); // A
+  const [devCostPerYear, setDevCostPerYear] = useState(100000); // B
+  const [improvedPrioritizationGain, setPrioritizationGain] = useState(0.1); // C
+  const [decresedMonthlyReporting, setDecresedMonthlyReporting] = useState(4); // D
   const [visiblePopup, setVisiblePopup] = useState(null);
 
   const slider1Ref = useRef(null);
@@ -23,7 +23,7 @@ const ROICalculator = () => {
 
   useEffect(() => {
     if (slider2Ref.current) {
-      updateBackground(improvedPrioritizationGain, 0, 100, slider2Ref);
+      updateBackground(improvedPrioritizationGain, 0.0, 1, slider2Ref);
     }
   }, [improvedPrioritizationGain]);
 
@@ -35,46 +35,57 @@ const ROICalculator = () => {
     setVisiblePopup(null);
   };
 
-  const devBoostCostPerUserPerMonth = 20; // USD //D
-  const devBoostPerformanceGain = 10; // 10% C
-  // const  = 0.1; // 10% I
+  const devBoostCostPerUserPerMonth = 20; //D
+  const devBoostPerformanceGain = 0.1; // 10% C
 
   // Calculations
   const reportingOverheadSavingsHours =
     (decresedMonthlyReporting / 4 / numDevelopers) * devCostPerYear; // H
 
   const increasedEfficiency = devBoostPerformanceGain * numDevelopers; // L
-  const increasedPerformanceSavings =
-    devCostPerYear * increasedEfficiency - devCostPerYear * numDevelopers; // E
+
   const totalDevBoostCostPerYear =
-    numDevelopers * devBoostCostPerUserPerMonth * 12; // Q
-  const totalSavings = increasedPerformanceSavings - totalDevBoostCostPerYear; // F
+    numDevelopers * devBoostCostPerUserPerMonth * 12; // Q  7200
 
   const savingsFromInvestmentPrioritization =
     improvedPrioritizationGain * numDevelopers * devCostPerYear; // real G
   const reportingOverheadSavings =
     (reportingOverheadSavingsHours / 4 / numDevelopers) * devCostPerYear; // H
 
+  const withoutHiringDeveloper = numDevelopers * devBoostPerformanceGain; // Revised calculation
+
+  const increasedPerformanceSavings = withoutHiringDeveloper * devCostPerYear; // E  1200
+
+  const totalSavings = increasedPerformanceSavings - totalDevBoostCostPerYear; // F
+
   const totalSavingsWithDevBoost =
-    totalSavings +
+    increasedPerformanceSavings - 20 * numDevelopers * 12;
+  savingsFromInvestmentPrioritization + reportingOverheadSavings; //J
+
+  const totalS =
     savingsFromInvestmentPrioritization +
-    reportingOverheadSavings; //J
-  const roi =
-    (totalSavingsWithDevBoost - savingsFromInvestmentPrioritization) /
-    savingsFromInvestmentPrioritization; //K
+    reportingOverheadSavings +
+    totalSavings;
 
-  const withoutHiringDeveloper =
-    numDevelopers * (numDevelopers + devBoostPerformanceGain); // Revised calculation
+  const roi = ((totalS - numDevelopers * 20 * 12) / numDevelopers) * 20 * 12;
 
-  const paybackPeriod = totalDevBoostCostPerYear / increasedPerformanceSavings; // real L
   const increasedPerformanceSavingsPerDay = increasedPerformanceSavings / 250; // M
+
+  const paybackPeriod =
+    totalDevBoostCostPerYear / increasedPerformanceSavingsPerDay; // real L8
+
   const totalDevCostPerDay = (numDevelopers * devCostPerYear) / 250; // 0
-  const paybackPeriodBasedOnOverallCost =
-    totalDevBoostCostPerYear / totalDevCostPerDay; //N
+  // const paybackPeriodBasedOnOverallCost =
+  // // numDevelopers *  / totalDevCostPerDay;
+
+  const paybayP2 = (numDevelopers * 20 * 12) / totalDevCostPerDay;
 
   const handleChange = (event) => {
-    setPrioritizationGain(event.target.value);
+    const value = event.target.value;
+    const percentage = value / 100;
+    setPrioritizationGain(percentage); // Store the calculated percentage as decimal
   };
+
   const handleChangeDecreasedMonthlyReporting = (event) => {
     setDecresedMonthlyReporting(event.target.value);
   };
@@ -82,35 +93,52 @@ const ROICalculator = () => {
   const formatNumber = (value) => {
     return isNaN(value) ? 0 : value.toFixed(0);
   };
+
+  const formatNumberWithCommas = (value) => {
+    // Remove all non-numeric characters except for the decimal point
+    const onlyNums = value.replace(/[^0-9]/g, "");
+    return onlyNums.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
+  const handleNumDevelopersChange = (e) => {
+    const formattedValue = formatNumberWithCommas(e.target.value);
+    setNumDevelopers(formattedValue);
+  };
+
+  const handleDevCostPerYearChange = (e) => {
+    const formattedValue = formatNumberWithCommas(e.target.value);
+    setDevCostPerYear(formattedValue);
+  };
+
   return (
-    <div className="bg-[#000049] py-[124px] px-20">
+    <div className="bg-[#000049] lg:py-[124px] py-20 lg:px-20 px-5">
       <div className="max-container">
-        <h2 className="font-inter text-[48px] text-white font-semibold text-center">
+        <h2 className="font-inter lg:text-[48px] text-[28px] text-white font-semibold lg:text-center">
           ROI Calculator
         </h2>
-        <div className="flex justify-between space-x-10">
-          <div className="bg-white w-[50%] rounded-[20px] max-h-[1490px] py-[64px] px-[44px] text-[#000049] mt-10">
-            <p className="font-inter font-bold text-[32px]">
+        <div className="lg:flex justify-between lg:space-x-10">
+          <div className="bg-white lg:w-[50%] rounded-[20px] min-h-[1100px] lg:py-[64px] py-10 lg:px-[44px] px-5 text-[#000049] mt-10">
+            <p className="font-inter font-bold lg:text-[32px] text-[24px] leading-[31px]">
               Enter Your Company Details
             </p>
 
-            <div className=" grid grid-cols-2 gap-x-10 mt-5">
-              <label className="font-inter font-medium leading-[26px] text-[20px]">
+            <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-x-10 lg:gap-y-0 gap-y-6 mt-5">
+              <label className="font-inter font-medium lg:leading-[26px] lg:text-[20px] text-[16px] leading-[20px]">
                 Number of developers in your organization:
                 <input
                   type="tel"
                   value={numDevelopers}
                   className="w-full border border-[#000049] h-[64px] rounded-lg px-5 mt-4"
-                  onChange={(e) => setNumDevelopers(e.target.value)}
+                  onChange={handleNumDevelopersChange}
                 />
               </label>
-              <label className="font-inter font-medium leading-[26px] text-[20px]">
+              <label className="font-inter font-medium lg:leading-[26px] lg:text-[20px] text-[16px] leading-[20px]">
                 Average developer cost per year:
                 <input
                   type="tel"
                   value={devCostPerYear}
                   className="w-full border border-[#000049] h-[64px] rounded-lg px-5 mt-4"
-                  onChange={(e) => setDevCostPerYear(e.target.value)}
+                  onChange={handleDevCostPerYearChange}
                 />
               </label>
             </div>
@@ -118,7 +146,7 @@ const ROICalculator = () => {
             <div className="mt-5">
               <div className="space-y-4">
                 <div className="flex items-start space-x-2 relative">
-                  <p className="font-medium font-inter text-[20px] leading-[26px] w-[370px] whitespace-nowrap">
+                  <p className="font-medium font-inter lg:text-[20px] lg:leading-[26px] text-[16px] leading-[20px] w-[370px] whitespace-nowrap">
                     Improved prioritization of engineering <br /> investments
                   </p>
                   <img
@@ -143,15 +171,15 @@ const ROICalculator = () => {
                 </div>
               </div>
 
-              <div className=" flex items-center space-x-4 mt-8">
-                <span className="w-[99px] h-[64px] border border-[#455A64] rounded-lg text-[20px] flex items-center justify-center">
-                  {improvedPrioritizationGain}%
+              <div className="lg:flex items-center lg:space-x-4 mt-8">
+                <span className="w-[99px] h-[64px] lg:mb-0 mb-6 border border-[#455A64] rounded-lg text-[20px] flex items-center justify-center">
+                  {(improvedPrioritizationGain * 100).toFixed(2)}%
                 </span>
                 <input
                   type="range"
                   min="1"
                   max="100"
-                  value={improvedPrioritizationGain}
+                  value={improvedPrioritizationGain * 100}
                   onChange={handleChange}
                   step="1"
                   ref={slider2Ref}
@@ -163,7 +191,7 @@ const ROICalculator = () => {
             <div className="mt-5">
               <div className="flex items-center space-x-2 relative">
                 <div className="">
-                  <p className="font-medium font-inter text-[20px]">
+                  <p className="font-medium font-inter lg:text-[20px] lg:leading-[26px] text-[16px] leading-[20px]">
                     Decreased monthly reporting overhead
                   </p>
                 </div>
@@ -187,14 +215,14 @@ const ROICalculator = () => {
                   </div>
                 )}
               </div>
-              <p className="text-[18px] leading-[24px] mt-2 font-inter">
+              <p className="lg:text-[18px] text-[14px] lg:leading-[24px] leading-[18px] mt-2 font-inter">
                 On average, 4 hours per engineering manager per month. In many
                 organizations, an engineering operations manager may also
                 dedicate a large portion of their time to this.
               </p>
 
-              <div className="flex items-center space-x-4 mt-8">
-                <span className="w-[99px] h-[64px] border border-[#455A64] rounded-lg text-[20px] flex items-center justify-center">
+              <div className="lg:flex items-center lg:space-x-4 mt-8">
+                <span className="w-[99px] h-[64px] lg:mb-0 mb-6 border border-[#455A64] rounded-lg text-[20px] flex items-center justify-center">
                   {decresedMonthlyReporting} hrs
                 </span>
                 <input
@@ -213,7 +241,7 @@ const ROICalculator = () => {
             <hr className="my-10" />
 
             <div className="flex items-start space-x-2 relative">
-              <p className="font-inter text-[20px] leading-[26px] font-medium">
+              <p className="font-inter lg:text-[20px] text-[16px] lg:leading-[26px] leading-[20px] font-medium">
                 DevBoost performance improvement gain = 10%
               </p>
               <img
@@ -236,125 +264,144 @@ const ROICalculator = () => {
                 </div>
               )}
             </div>
-            <div className="mt-10 ">
-              <p className=" font-inter text-[32px] leading-[48px] font-bold">
-                DevBoost basic product cost = <br />
+            <div className="lg:mt-10 mt-[31px] ">
+              <p className=" font-inter lg:text-[32px] text-[24px] lg:leading-[48px] leading-[31px] font-bold">
+                DevBoost basic product cost = <br className="lg:block hidden" />
                 20 USD/user/month
               </p>
             </div>
           </div>
-          <div className="bg-white w-[50%] rounded-[20px] max-h-[1490px] py-[64px] px-[44px] text-[#000049] mt-10">
-            <p className="font-inter text-[32px] font-bold">Total Savings:</p>
-            <p className="font-inter text-[56px] font-bold">
-              {typeof totalSavingsWithDevBoost === "number"
-                ? formatNumber(totalSavingsWithDevBoost) + " USD"
-                : "0 USD"}
+          <div className="bg-white lg:w-[50%] rounded-[20px] max-h-[1100px] lg:py-[64px] py-10 lg:px-[44px] px-5 text-[#000049] mt-10">
+            <p className="font-inter lg:text-[32px] text-[24px] font-bold">
+              Total Savings:
+            </p>
+            <p className="font-inter lg:text-[56px] text-[36px] font-bold">
+              ${" "}
+              {typeof totalS === "number"
+                ? Math.floor(totalS).toLocaleString() + ""
+                : "0"}
             </p>
             <hr className="my-5" />
 
-            <p className="font-inter text-[20px] leading-[26px]">
+            {/*<p className="font-inter lg:text-[20px] text-[16px] lg:leading-[26px] leading-[20px]">
               Increased Performance Savings: <br />
             </p>
-            <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
+            <p className="font-inter lg:text-[32px] text-[24px] lg:leading-[32px] leading-[24px] font-bold mt-2">
               {typeof increasedPerformanceSavings === "number"
                 ? formatNumber(increasedPerformanceSavings) + " USD"
                 : "0 USD"}
-            </p>
-            <p className="font-inter text-[20px] leading-[26px] mt-5">
+            </p>*/}
+            <p className="font-inter lg:text-[20px] text-[16px] lg:leading-[26px] leading-[20px] mt-5">
               Total savings with DevBoost because of increased efficiency <br />
             </p>
-            <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
+            <p className="font-inter lg:text-[32px] text-[24px] lg:leading-[32px] leading-[24px] font-bold mt-2">
+              ${" "}
               {typeof totalSavings === "number"
-                ? formatNumber(totalSavings) + " USD"
-                : "0 USD"}
+                ? Math.floor(totalSavings).toLocaleString() + " "
+                : "0"}
             </p>
-            <p className="font-inter text-[20px] leading-[26px] mt-5">
+            {/*<p className="font-inter lg:text-[20px] text-[16px] lg:leading-[26px] leading-[20px] mt-5">
               Increased efficiency without hiring additional developers <br />
             </p>
-            <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
+            <p className="font-inter lg:text-[32px] text-[24px] lg:leading-[32px] leading-[24px] font-bold mt-2">
               {typeof withoutHiringDeveloper === "number"
-                ? formatNumber(withoutHiringDeveloper) + " USD"
-                : "0 USD"}
-            </p>
-            <p className="font-inter text-[20px] leading-[26px] mt-5">
+                ? formatNumber(withoutHiringDeveloper) + " "
+                : "0 "}
+            </p>*/}
+            <p className="font-inter lg:text-[20px] text-[16px] lg:leading-[26px] leading-[20px] mt-5">
               Savings from investment prioritization
             </p>
-            <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
+            <p className="font-inter lg:text-[32px] text-[24px] lg:leading-[32px] leading-[24px] font-bold mt-2">
+              ${" "}
               {typeof savingsFromInvestmentPrioritization === "number"
-                ? formatNumber(savingsFromInvestmentPrioritization) + " USD"
-                : "0 USD"}
+                ? Math.floor(
+                    savingsFromInvestmentPrioritization
+                  ).toLocaleString() + ""
+                : "0"}
             </p>
 
-            <p className="font-inter text-[20px] leading-[26px] mt-5">
+            <p className="font-inter lg:text-[20px] text-[16px] lg:leading-[26px] leading-[20px] mt-5">
               Total DevBoost cost for developers/year
             </p>
-            <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
+            <p className="font-inter lg:text-[32px] text-[24px] lg:leading-[32px] leading-[24px] font-bold mt-2">
+              ${" "}
               {typeof totalDevBoostCostPerYear === "number"
-                ? formatNumber(totalDevBoostCostPerYear) + " USD"
-                : "0 USD"}
+                ? Math.floor(totalDevBoostCostPerYear).toLocaleString() + " "
+                : "0 "}
             </p>
-            <p className="font-inter text-[20px] leading-[26px] mt-5">
+            <p className="font-inter lg:text-[20px] text-[16px] lg:leading-[26px] leading-[20px] mt-5">
               Reporting overhead savings
             </p>
-            <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
+            <p className="font-inter lg:text-[32px] text-[24px] lg:leading-[32px] leading-[24px] font-bold mt-2">
+              ${" "}
               {typeof reportingOverheadSavingsHours === "number"
-                ? formatNumber(reportingOverheadSavingsHours) + " USD"
-                : "0 USD"}
+                ? Math.floor(reportingOverheadSavingsHours).toLocaleString() +
+                  ""
+                : "0"}
             </p>
-            <p className="font-inter text-[20px] leading-[26px] mt-5">
+            <p className="font-inter lg:text-[20px] text-[16px] lg:leading-[26px] leading-[20px] mt-5">
               ROI on cost
             </p>
-            <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
-              {typeof roi === "number" ? formatNumber(roi) + " USD" : "0 USD"}
+            <p className="font-inter lg:text-[32px] text-[24px] lg:leading-[32px]  font-bold mt-2">
+              ${" "}
+              {typeof roi === "number"
+                ? Math.floor(roi).toLocaleString() + " "
+                : "0 "}
             </p>
 
             <hr className="my-5" />
 
             <div className="">
-              <p className="font-inter font-bold text-[32px] leading-[48px]">
+              <p className="font-inter font-bold lg:text-[32px] text-[24px] lg:leading-[42px] leading-[31px]">
                 Scenario analysis for investment breakeven period (When you will
                 get your investment back)
               </p>
 
               <div className="grid grid-cols-2 gap-x-10 gap-y-8 mt-5">
                 <div className="">
-                  <p className="font-inter text-[20px] leading-[26px] mt-5">
-                    Payback Period
+                  <p className="font-inter lg:text-[16px] text-[16px] lg:leading-[26px] leading-[20px] mt-5">
+                    Payback Period on Perfomance Saving
                   </p>
-                  <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
-                    {typeof paybackPeriod === "number"
-                      ? formatNumber(paybackPeriod) + " Days"
-                      : "0 Days"}
+                  <p className="font-inter lg:text-[32px] text-[24px] lg:leading-[32px] leading-[24px] font-bold mt-2">
+                    {paybackPeriod} Days
                   </p>
                 </div>
-                <div className="">
-                  <p className="font-inter text-[20px] leading-[26px] mt-5">
+                {/*<div className="">
+                  <p className="font-inter lg:text-[20px] text-[16px] lg:leading-[26px] leading-[20px] mt-5">
                     Increased performance savings per day
                   </p>
-                  <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
+                  <p className="font-inter lg:text-[32px] text-[24px] lg:leading-[32px] leading-[24px] font-bold mt-2">
                     {typeof increasedPerformanceSavingsPerDay === "number"
                       ? formatNumber(increasedPerformanceSavingsPerDay) + " USD"
                       : "0 USD"}
                   </p>
                 </div>
                 <div className="">
-                  <p className="font-inter text-[20px] leading-[26px] mt-5">
+                  <p className="font-inter lg:text-[20px] text-[16px] lg:leading-[26px] leading-[20px] mt-5">
                     Payback period based on overall engineering cost
                   </p>
-                  <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
-                    {typeof paybackPeriodBasedOnOverallCost === "number"
-                      ? formatNumber(paybackPeriodBasedOnOverallCost) + " Days"
-                      : "0 Days"}
-                  </p>
-                </div>
-                <div className="">
-                  <p className="font-inter text-[20px] leading-[26px] mt-5">
-                    Total developer spend per day
-                  </p>
-                  <p className="font-inter text-[32px] leading-[32px] font-bold mt-2">
+                 <p className="font-inter lg:text-[32px] text-[24px] lg:leading-[32px] leading-[24px] font-bold mt-2">
                     {typeof totalDevCostPerDay === "number"
                       ? formatNumber(totalDevCostPerDay) + " USD"
                       : "0 USD"}
+                  </p>
+                </div>
+                <div className="">
+                  <p className="font-inter lg:text-[20px] text-[16px] lg:leading-[26px] leading-[20px] mt-5">
+                    Total developer spend per day
+                  </p>
+                  <p className="font-inter lg:text-[32px] text-[24px] lg:leading-[32px] leading-[24px] font-bold mt-2">
+                    {typeof totalDevCostPerDay === "number"
+                      ? formatNumber(totalDevCostPerDay) + " USD"
+                      : "0 USD"}
+                  </p>
+                </div>*/}
+                <div className="">
+                  <p className="font-inter lg:text-[16px] text-[16px] lg:leading-[26px] leading-[20px] mt-5">
+                    Payback Period on Overall Engineering Cost
+                  </p>
+                  <p className="font-inter lg:text-[32px] text-[24px] lg:leading-[32px] leading-[24px] font-bold mt-2">
+                    {paybayP2} Days
                   </p>
                 </div>
               </div>

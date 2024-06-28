@@ -87,7 +87,7 @@ const TeamSection = () => {
     },
     {
       name: "Amar Bedi",
-      role: "Tech Advisor",
+      role: "Business Strategy Advisor",
       image: "/Images/team3.png",
       linkedIn: "https://www.linkedin.com/in/amarbedi/  ",
     },

@@ -79,12 +79,12 @@ const AllBlogs = () => {
   );
 
   return (
-    <div className="pt-[118px] pb-[156px] px-20 max-container">
-      <div className="tagsButtons h-[89px] rounded-lg border border-[#000049] p-3 flex items-center justify-between">
+    <div className="lg:pt-[118px] pt-[84px] lg:pb-[156px] pb-20 lg:px-20 px-5 max-container">
+      <div className="tagsButtons lg:h-[89px] h-[64px] rounded-lg border border-[#000049] p-3 flex items-center justify-between overflow-y-hidden overflow-x-auto">
         {tags.map((tag) => (
           <button
             key={tag}
-            className={`h-[65px] w-auto px-7 rounded-lg font-inter text-[24px] ${
+            className={`lg:h-[65px] h-[43px] w-auto px-7 rounded-lg font-inter lg:text-[24px] text-[16px] whitespace-nowrap ${
               activeTag === tag
                 ? "bg-[#000049] text-white"
                 : "bg-transparent text-[#000049]"
@@ -96,15 +96,15 @@ const AllBlogs = () => {
         ))}
       </div>
 
-      <div className="grid grid-cols-3 gap-x-5 gap-y-5 mt-[50px]">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-x-5 gap-y-5 mt-[50px]">
         {filteredBlogs.map((blog) => (
           <div
             key={blog.id}
-            className="min-h-[580px] rounded-[8px] w-full bg-[#000049] relative"
+            className="lg:min-h-[580px] rounded-[8px] w-full bg-[#000049] relative"
           >
             <img src={blog.imgSrc} alt={`Blog${blog.id}`} className="w-full" />
             <div className="text-white p-7">
-              <p className="font-inter text-[16px] font-normal flex items-center opacity-60">
+              <p className="font-inter lg:text-[16px] text-[14px] font-normal flex items-center opacity-60">
                 DevBoost
                 <span className="mx-3">
                   <svg
@@ -119,15 +119,15 @@ const AllBlogs = () => {
                 </span>
                 {blog.date}
               </p>
-              <p className="font-inter text-[24px] font-semibold leading-[30px] mt-3">
+              <p className="font-inter lg:text-[24px] text-[20px] font-semibold lg:leading-[30px] leading-[24px] mt-3">
                 {blog.title}
               </p>
-              <p className="font-inter text-[16px] font-normal leading-[24px] mt-3 opacity-90 pr-5">
+              <p className="font-inter lg:text-[16px] text-[14px] font-normal lg:leading-[24px] leading-[21px] mt-3 opacity-90 pr-5">
                 {blog.description}
               </p>
               {blog.links ? (
                 <Link href={blog.links}>
-                  <div className="font-inter font-semibold text-[16px] text-[#1FFFA3] mt-4 flex items-center cursor-pointer space-x-2 hover:space-x-3 transition-all duration-100 w-[140px] absolute bottom-7 left-7">
+                  <div className="font-inter font-semibold text-[16px] text-[#1FFFA3] mt-4 flex items-center cursor-pointer space-x-2 hover:space-x-3 transition-all duration-100 w-[140px] lg:absolute bottom-7 left-7">
                     <p>Read More</p>
                     <img src="/Images/moreArr.png" alt="" />
                   </div>
@@ -139,7 +139,7 @@ const AllBlogs = () => {
       </div>
 
       <div className="flex items-center justify-center mt-[56px]">
-        <button className="mt-0 rounded-[8px] font-inter text-[20px] hover:bg-[#000049] hover:text-[#1FFFA3] text-[#000049] font-semibold w-[159px] h-[60px] border border-[#000049]">
+        <button className="mt-0 rounded-[8px] font-inter text-[20px]  hover:bg-[#000049] hover:text-[#1FFFA3] text-[#000049] font-semibold lg:w-[159px] w-[143px] lg:h-[60px] h-[56px] border border-[#000049]">
           View All
         </button>
       </div>
