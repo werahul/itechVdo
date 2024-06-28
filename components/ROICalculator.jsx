@@ -184,7 +184,7 @@ const ROICalculator = () => {
 
               <div className="lg:flex items-center lg:space-x-4 mt-8">
                 <span className="w-[99px] h-[64px] lg:mb-0 mb-6 border border-[#455A64] rounded-lg text-[20px] flex items-center justify-center">
-                  {(improvedPrioritizationGain * 100).toFixed(2)}%
+                  {(improvedPrioritizationGain * 100).toFixed(0)}%
                 </span>
                 <input
                   type="range"
