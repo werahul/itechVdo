@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const AboutSwitch = () => {
   const [selectedTab, setSelectedTab] = useState("Vision");
@@ -7,10 +7,23 @@ const AboutSwitch = () => {
   const missionTabRef = useRef(null);
   const valuesTabRef = useRef(null);
 
-  const handleTabClick = (tab, ref) => {
-    setSelectedTab(tab);
-    ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
-  };
+  useEffect(() => {
+    if (window.innerWidth < 1024) {
+      switch (selectedTab) {
+        case "Vision":
+          visionTabRef.current.scrollIntoView({ behavior: "smooth", inline: "center" });
+          break;
+        case "Mission":
+          missionTabRef.current.scrollIntoView({ behavior: "smooth", inline: "center" });
+          break;
+        case "Values":
+          valuesTabRef.current.scrollIntoView({ behavior: "smooth", inline: "center" });
+          break;
+        default:
+          break;
+      }
+    }
+  }, [selectedTab]);
 
   const renderContent = () => {
     switch (selectedTab) {
@@ -83,26 +96,26 @@ const AboutSwitch = () => {
               </p>
 
               <div className="grid grid-cols-2 lg:gap-x-0 gap-x-40 gap-y-8 mt-8 pr-20">
-                <div className=" flex items-center space-x-2">
-                  <img src="/Images/ab1.png" alt="" />
+                <div className="flex items-center space-x-2">
+                  <img src="/Images/ab1.png" alt="" className="lg:w-auto w-[35px] " />
                   <p className="font-inter font-medium lg:text-[16px] text-[14px] text-white">
                     Transparency
                   </p>
                 </div>
                 <div className=" flex items-center space-x-2">
-                  <img src="/Images/ab2.png" alt="" />
+                  <img src="/Images/ab2.png" alt="" className="lg:w-auto w-[35px]" />
                   <p className="font-inter font-medium lg:text-[16px] text-[14px] text-white">
                     Agility
                   </p>
                 </div>
                 <div className=" flex items-center space-x-2">
-                  <img src="/Images/ab3.png" alt="" />
+                  <img src="/Images/ab3.png" alt="" className="lg:w-auto w-[35px]" />
                   <p className="font-inter font-medium lg:text-[16px] text-[14px] text-white">
                     Innovation
                   </p>
                 </div>
                 <div className=" flex items-center space-x-2">
-                  <img src="/Images/ab4.png" alt="" />
+                  <img src="/Images/ab4.png" alt="" className="lg:w-auto w-[35px]"/>
                   <p className="font-inter whitespace-nowrap font-medium lg:text-[16px] text-[14px] text-white">
                     Team Work
                   </p>
@@ -126,7 +139,7 @@ const AboutSwitch = () => {
               ? "bg-[#ffffff] text-[#000049] font-semibold"
               : "bg-transparent text-white font-normal opacity-70"
           } px-6 lg:h-[88px] h-[43px] min-w-[140px] lg:min-w-[350px] rounded-[8px] flex items-center space-x-3 lg:text-[21px] text-[16px]`}
-          onClick={() => handleTabClick("Vision", visionTabRef)}
+          onClick={() => setSelectedTab("Vision")}
         >
           <img src="/Images/abVision.png" alt="Vision" className="lg:w-auto w-[33px]" />
           <p>Vision</p>
@@ -138,7 +151,7 @@ const AboutSwitch = () => {
               ? "bg-[#ffffff] text-[#000049] font-semibold"
               : "bg-transparent text-white font-normal opacity-70"
           } px-6 lg:h-[88px] h-[43px] min-w-[140px] lg:min-w-[350px] rounded-[8px] flex items-center space-x-3 lg:text-[21px] text-[16px]`}
-          onClick={() => handleTabClick("Mission", missionTabRef)}
+          onClick={() => setSelectedTab("Mission")}
         >
           <img src="/Images/abMission.png" alt="Mission" className="lg:w-auto w-[33px]" />
           <p>Mission</p>
@@ -150,7 +163,7 @@ const AboutSwitch = () => {
               ? "bg-[#ffffff] text-[#000049] font-semibold"
               : "bg-transparent text-white font-normal opacity-70"
           } px-6 lg:h-[88px] h-[43px] min-w-[167px] lg:min-w-[350px] rounded-[8px] flex items-center space-x-3 lg:text-[21px] text-[16px]`}
-          onClick={() => handleTabClick("Values", valuesTabRef)}
+          onClick={() => setSelectedTab("Values")}
         >
           <img src="/Images/abValues.png" alt="Values" className="lg:w-auto w-[33px]" />
           <p>Values</p>
