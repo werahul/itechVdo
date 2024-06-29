@@ -137,11 +137,11 @@ const Page = () => {
         </section>
         <div className=""></div>
         <section className="lg:py-[156px] py-20 lg:px-20 px-5">
-          <p className="text-center font-inter font-normal lg:text-[48px] text-[28px] text-[#000049] mb-[48px]">
+          <p className="lg:text-center font-inter font-normal lg:text-[48px] text-[28px] text-[#000049] mb-[48px]">
             Key <span className="font-semibold">USPs</span>
           </p>
 
-          <div className="space-y-[70px]">
+          <div className="lg:space-y-[70px] space-y-[40px]">
             <div className="lg:flex items-center lg:space-x-5 relative">
               <div className="lg:w-[50%]">
                 <img src="/Images/usp1.png" alt="Usp1" />

@@ -33,7 +33,7 @@ const NavbarMobile = () => {
         </div>
 
         <div className={` ${showDropdown ? "block" : "hidden"}`}>
-          <ul className="md:flex md:space-x-8 mt-20">
+          <ul className="md:flex md:space-x-8 mt-10">
             <li>
               <Link href="/">
                 <p className="text-[18px] font-inter border-b boder-[#777777] pb-2">
