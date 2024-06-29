@@ -124,7 +124,7 @@ const ContactBlue = () => {
                   </div>
                 </div>
               </div>
-              <div className="lg:mt-[180px] mt-[30px]">
+              <div className="lg:mt-[180px] mt-[10px]">
                 <img src="/Images/contactImg.png" alt="contact" />
               </div>
             </div>

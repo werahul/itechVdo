@@ -37,7 +37,7 @@ const PricingFaq = () => {
   };
 
   return (
-    <div className="lg:py-[156px] py-20 lg:px-20 px-5 max-container">
+    <div className="lg:pt-[156px] lg:pb-[156px] pt-0 pb-12 lg:px-20 px-5 max-container">
       <p className="lg:text-center font-inter font-semibold lg:text-[48px] text-[28px] text-[#000049]">
         FAQ’s
       </p>

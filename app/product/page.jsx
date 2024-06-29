@@ -56,7 +56,7 @@ const Page = () => {
               <img
                 src="/Images/playBtn.png"
                 alt="Play Button"
-                className="z-10 lg:w-[114px] w-[45px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+                className="z-10 lg:w-[114px] lg:block hidden w-[45px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
                 onClick={handlePlayPause}
               />
             )}

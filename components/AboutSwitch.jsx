@@ -1,7 +1,16 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const AboutSwitch = () => {
   const [selectedTab, setSelectedTab] = useState("Vision");
+  
+  const visionTabRef = useRef(null);
+  const missionTabRef = useRef(null);
+  const valuesTabRef = useRef(null);
+
+  const handleTabClick = (tab, ref) => {
+    setSelectedTab(tab);
+    ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
 
   const renderContent = () => {
     switch (selectedTab) {
@@ -111,34 +120,37 @@ const AboutSwitch = () => {
     <div className="lg:h-[594px] BlueGra2 rounded-[20px] lg:px-10 px-5 py-14 relative">
       <div className="bg-[#ffffff] bg-opacity-15 w-full p-3 rounded-[8px] flex items-center justify-between overflow-x-auto">
         <div
+          ref={visionTabRef}
           className={`cursor-pointer ${
             selectedTab === "Vision"
               ? "bg-[#ffffff] text-[#000049] font-semibold"
               : "bg-transparent text-white font-normal opacity-70"
           } px-6 lg:h-[88px] h-[43px] min-w-[140px] lg:min-w-[350px] rounded-[8px] flex items-center space-x-3 lg:text-[21px] text-[16px]`}
-          onClick={() => setSelectedTab("Vision")}
+          onClick={() => handleTabClick("Vision", visionTabRef)}
         >
           <img src="/Images/abVision.png" alt="Vision" className="lg:w-auto w-[33px]" />
           <p>Vision</p>
         </div>
         <div
+          ref={missionTabRef}
           className={`cursor-pointer ${
             selectedTab === "Mission"
               ? "bg-[#ffffff] text-[#000049] font-semibold"
               : "bg-transparent text-white font-normal opacity-70"
           } px-6 lg:h-[88px] h-[43px] min-w-[140px] lg:min-w-[350px] rounded-[8px] flex items-center space-x-3 lg:text-[21px] text-[16px]`}
-          onClick={() => setSelectedTab("Mission")}
+          onClick={() => handleTabClick("Mission", missionTabRef)}
         >
           <img src="/Images/abMission.png" alt="Mission" className="lg:w-auto w-[33px]" />
           <p>Mission</p>
         </div>
         <div
+          ref={valuesTabRef}
           className={`cursor-pointer ${
             selectedTab === "Values"
               ? "bg-[#ffffff] text-[#000049] font-semibold"
               : "bg-transparent text-white font-normal opacity-70"
           } px-6 lg:h-[88px] h-[43px] min-w-[167px] lg:min-w-[350px] rounded-[8px] flex items-center space-x-3 lg:text-[21px] text-[16px]`}
-          onClick={() => setSelectedTab("Values")}
+          onClick={() => handleTabClick("Values", valuesTabRef)}
         >
           <img src="/Images/abValues.png" alt="Values" className="lg:w-auto w-[33px]" />
           <p>Values</p>

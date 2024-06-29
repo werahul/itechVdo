@@ -51,7 +51,7 @@ const HomeBlue = () => {
 
   return (
     <div className="">
-      <div className="pricingBg w-full lg:h-[859px] h-[700px] lg:rounded-b-[80px] rounded-b-[40px] lg:px-20 px-5 lg:pt-[300px] pt-[50px] z-10 ">
+      <div className="pricingBg w-full lg:h-[859px] h-[600px] lg:rounded-b-[80px] rounded-b-[40px] lg:px-20 px-5 lg:pt-[300px] pt-[50px] z-10 ">
         <p className="font-bold tracking-wide wordSpace font-flyHead lg:text-[64px] text-[32px] lg:leading-[94px] leading-[42px] text-[#ffffff] text-center">
           BOOST <br className="lg:hidden block" />
           <span
@@ -93,7 +93,7 @@ const HomeBlue = () => {
           className="lg:w-[517px] w-[320px]"
         />
       </div>
-      <div className=" mt-[150px] lg:mb-2 mb-7 lg:px-0 px-5">
+      <div className=" lg:mt-[150px] mt-20 lg:mb-2 mb-7 lg:px-0 px-5">
         <p className="font-inter font-bold lg:text-[24px] text-[20px] lg:leading-[36px] leading-[30px] lg:text-center text-[#000049] ">
           {" "}
           Loved by 100+ Engineering Teams{" "}
@@ -246,7 +246,7 @@ const HomeBlue = () => {
                   target="_blank"
                   className=""
                 >
-                  <p className="mt-2 font-inter lg:text-[12px] text-[8px] lg:whitespace-nowrap text-[#000049] text-center">
+                  <p className="mt-2 font-inter lg:text-[12px] text-[8px] lg:whitespace-nowrap underline text-[#000049] text-center">
                     [Source:
                     https://leaddev.com/scaling-teams-hypergrowth/four-engineering-leadership-trends-you-need-know]
                   </p>

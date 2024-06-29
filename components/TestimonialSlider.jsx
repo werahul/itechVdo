@@ -35,7 +35,7 @@ const TestimonialSlider = () => {
 
   return (
     <div className="lg:py-[156px] py-20 lg:px-20 px-5 max-container">
-      <div className="lg:text-center font-inter font-normal lg:text-[48px] text-[28px] lg:leading-normal leading-[32px] text-[#000049] lg:mb-10 mb-14">
+      <div className="lg:text-center font-inter font-normal lg:text-[48px] text-[28px] lg:leading-normal leading-[32px] text-[#000049] lg:mb-10 mb-8">
         See Why <span className="font-semibold"> Engineering Leaders</span> Love
         DevBoost
       </div>

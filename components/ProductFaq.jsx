@@ -153,7 +153,7 @@ const ProductFaq = () => {
                 isOpen ? "opacity-100" : "opacity-70"
               }`}
             >
-              <div className="lg:w-[70%] w-[90%]">
+              <div className="lg:w-[70%] w-[80%]">
                 <p className="questions font-inter font-semibold lg:text-[24px] text-[18px] leading-[27px] text-[#000049]">
                   {faq.question}
                 </p>

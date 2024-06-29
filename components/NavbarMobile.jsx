@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 const NavbarMobile = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -7,14 +8,29 @@ const NavbarMobile = () => {
   const [showCompanyOption, setShowCompanyOption] = useState(false);
   const [showDevBoostOption, setShowDevBoostOption] = useState(false);
   const [showCaseOption, setShowCaseOption] = useState(true);
+  const [openDropdown, setOpenDropdown] = useState("caseStudy");
+  const pathname = usePathname();
+  const [activeMenuItem, setActiveMenuItem] = useState(pathname);
+  const [solutiosOptions, setSolutionsOptions] = useState(true);
+  const [companyOptions, setCompanyOptions] = useState(false);
+
+  const toggleDropdown2 = (dropdown) => {
+    setOpenDropdown(openDropdown === dropdown ? null : dropdown);
+  };
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
+  const toggleSoulationOptions = () => {
+    setSolutionsOptions(!solutiosOptions);
+  };
+  const toggleCompanyOptions = () => {
+    setCompanyOptions(!companyOptions);
+  };
 
   return (
-    <nav className="bg-[#000049] text-white px-4 py-7 lg:hidden">
-      <div className="container mx-auto  ">
+    <nav className="bg-[#000049] text-white px-4 py-8 lg:hidden">
+      <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <Link href="/">
             <img
@@ -25,196 +41,224 @@ const NavbarMobile = () => {
           </Link>
 
           <img
-            src="/images/humIcon.png"
+            src={showDropdown ? "/Images/closeNav.png" : "/Images/humIcon.png"}
             alt="icon"
-            className="w-[45px]"
+            className="w-[30px]"
             onClick={toggleDropdown}
           />
         </div>
 
-        <div className={` ${showDropdown ? "block" : "hidden"}`}>
-          <ul className="md:flex md:space-x-8 mt-10">
+        <div className={`${showDropdown ? "block" : "hidden"}`}>
+          <ul className="md:flex md:space-x-8 mt-16">
             <li>
               <Link href="/">
-                <p className="text-[18px] font-inter border-b boder-[#777777] pb-2">
+                <p
+                  className={`text-[18px] ${
+                    activeMenuItem === "/"
+                      ? "text-[#00ffba] font-semibold"
+                      : "text-white font-normal"
+                  } font-inter border-b border-[#777777] pb-2`}
+                >
                   Home
                 </p>
               </Link>
             </li>
             <li>
               <Link href="/product">
-                <p className="text-[18px] font-inter border-b boder-[#777777] pb-2 mt-[28px]">
+                <p
+                  className={`text-[18px] ${
+                    activeMenuItem === "/product"
+                      ? "text-[#00ffba] font-semibold"
+                      : "text-white font-normal"
+                  } font-inter border-b border-[#777777] pb-2 mt-[28px]`}
+                >
                   Product
                 </p>
               </Link>
             </li>
-            <li className="relative">
-              <div
-                className="flex items-center justify-between mt-[28px] border-b boder-[#777777] pb-2  w-full"
-                onClick={() => {
-                  setShowDropOption(true);
-                }}
-              >
-                <button className="text-[18px] text-left font-inter ">
+            <div className="relative">
+              <div className="flex items-center justify-between mt-[28px] border-b border-[#777777] pb-2 w-full" onClick={toggleSoulationOptions}>
+                <button
+                  className={`text-[18px] ${
+                    [
+                      "/case-study-one",
+                      "/engineering-lead",
+                      "/project-manager",
+                      "/team-leader",
+                    ].includes(activeMenuItem)
+                      ? "text-[#00ffba] font-semibold"
+                      : "text-white font-normal"
+                  } text-left font-inter`}
+                >
                   Solutions
                 </button>
-
-                <svg
-                  width="16"
-                  height="10"
-                  viewBox="0 0 16 10"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8.48454 9.43159C8.49429 9.4199 8.49819 9.4043 8.50794 9.3926L15.315 1.87189C15.6952 1.44876 15.6952 0.762405 15.315 0.33928C15.3111 0.33538 15.3072 0.333431 15.3033 0.331481C15.2187 0.229025 15.1127 0.146277 14.9928 0.0890225C14.8729 0.0317675 14.742 0.00138577 14.6091 0H0.993077C0.857779 0.00218624 0.72461 0.0340542 0.60298 0.0933534C0.481349 0.152653 0.374223 0.237937 0.289168 0.34318L0.285269 0.33928C0.101258 0.552179 0 0.824184 0 1.10558C0 1.38699 0.101258 1.65899 0.285269 1.87189L7.10792 9.43159C7.19285 9.53116 7.29838 9.61111 7.41721 9.66593C7.53605 9.72076 7.66536 9.74915 7.79623 9.74915C7.9271 9.74915 8.05641 9.72076 8.17524 9.66593C8.29407 9.61111 8.3996 9.53116 8.48454 9.43159Z"
-                    fill="#1FFFA3"
-                  />
-                </svg>
+                <img src={` ${solutiosOptions ? "/Images/greenDrop.svg" : "/Images/whiteDrop.svg"}`} alt="" />
               </div>
+              {solutiosOptions ? (
+                <div className="">
+                  <div className="">
+                    <li
+                      className="ml-16 w-[83%] mt-5 flex items-center space-x-4 border-b boder-[#777777] pb-2 "
+                      onClick={() => toggleDropdown2("caseStudy")}
+                    >
+                      <p
+                        className={`text-[18px]  ${
+                          activeMenuItem === "/case-study-one"
+                            ? "text-[#00ffba] font-semibold"
+                            : "text-white font-normal"
+                        } font-inter font-semibold `}
+                      >
+                        Case Study
+                      </p>
 
-              <ul
-                className={` text-white  py-2 pl-16 mt-2 ${
-                  showDropOption ? "block" : "hidden"
-                }`}
-              >
-                <li className="flex items-center space-x-4 border-b boder-[#777777] pb-2">
-                  <Link href="/solutions/case-study">
-                    <p className="text-[18px] font-inter font-semibold ">
-                      Case Study
-                    </p>
-                  </Link>
-
-                  <svg
-                    width="16"
-                    height="10"
-                    viewBox="0 0 16 10"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                      <img src={` ${openDropdown === "caseStudy" ? "/Images/greenDrop.svg" : "/Images/whiteDrop.svg"}`} alt="" />
+                    </li>
+                  </div>
+                  {openDropdown === "caseStudy" && (
+                    <ul className="text-white py-2 pl-16 mt-0">
+                      <li className="mt-2">
+                        <Link href="/case-study-one">
+                          <p className="font-inter text-[16px]">Case Study 1</p>
+                        </Link>
+                      </li>
+                      <li className="mt-1">
+                        <Link href="">
+                          <p className="font-inter text-[16px]">Case Study 2</p>
+                        </Link>
+                      </li>
+                      <li className="mt-1">
+                        <Link href="">
+                          <p className="font-inter text-[16px]">Case Study 3</p>
+                        </Link>
+                      </li>
+                      <li className="mt-1">
+                        <Link href="">
+                          <p className="font-inter text-[16px]">Case Study 4</p>
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
+                  <div
+                    className="ml-16 w-[83%] flex items-center space-x-3 mt-[28px] border-b border-[#777777] pb-2"
+                    onClick={() => toggleDropdown2("devBoost")}
                   >
-                    <path
-                      d="M8.48454 9.55708C8.49429 9.54538 8.49819 9.52979 8.50794 9.51809L15.315 1.99738C15.6952 1.57425 15.6952 0.887893 15.315 0.464768C15.3111 0.460868 15.3072 0.458919 15.3033 0.456969C15.2187 0.354513 15.1127 0.271766 14.9928 0.214511C14.8729 0.157256 14.742 0.126874 14.6091 0.125488H0.993077C0.857779 0.127675 0.72461 0.159542 0.60298 0.218842C0.481349 0.278141 0.374223 0.363425 0.289168 0.468668L0.285269 0.464768C0.101258 0.677668 0 0.949673 0 1.23107C0 1.51247 0.101258 1.78448 0.285269 1.99738L7.10792 9.55708C7.19285 9.65665 7.29838 9.7366 7.41721 9.79142C7.53605 9.84624 7.66536 9.87464 7.79623 9.87464C7.9271 9.87464 8.05641 9.84624 8.17524 9.79142C8.29407 9.7366 8.3996 9.65665 8.48454 9.55708Z"
-                      fill="white"
-                    />
-                  </svg>
-                </li>
-                {showCaseOption ? (
-                  <>
-                    <li className="mt-2">
-                      <Link href="/solutions/case-study/1">
-                        <p className="font-inter text-[16px]">Case Study 1</p>
-                      </Link>
-                    </li>
-                    <li className="mt-1">
-                      <Link href="/solutions/case-study/2">
-                        <p className="font-inter text-[16px]">Case Study 2</p>
-                      </Link>
-                    </li>
-                    <li className="mt-1">
-                      <Link href="/solutions/case-study/3">
-                        <p className="font-inter text-[16px]">Case Study 3</p>
-                      </Link>
-                    </li>
-                    <li className="mt-1">
-                      <Link href="/solutions/case-study/4">
-                        <p className="font-inter text-[16px]">Case Study 4</p>
-                      </Link>
-                    </li>
-                  </>
-                ) : (
-                  ""
-                )}
-
-                <li className="mt-5 flex items-center space-x-4 border-b boder-[#777777] pb-2">
-                  <Link href="/solutions/case-study">
-                    <p className="text-[18px] font-inter font-semibold">
+                    <button
+                      className={`text-[18px] ${
+                        [
+                          "/engineering-lead",
+                          "/project-manager",
+                          "/team-leader",
+                        ].includes(activeMenuItem)
+                          ? "text-[#00ffba] font-semibold"
+                          : "text-white font-normal"
+                      } text-left font-inter`}
+                    >
                       DevBoost Is For
-                    </p>
-                  </Link>
+                    </button>
+                    <img src={` ${openDropdown === "devBoost" ? "/Images/greenDrop.svg" : "/Images/whiteDrop.svg"}`}/>
+                  </div>
 
-                  <svg
-                    width="16"
-                    height="10"
-                    viewBox="0 0 16 10"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.48454 9.55708C8.49429 9.54538 8.49819 9.52979 8.50794 9.51809L15.315 1.99738C15.6952 1.57425 15.6952 0.887893 15.315 0.464768C15.3111 0.460868 15.3072 0.458919 15.3033 0.456969C15.2187 0.354513 15.1127 0.271766 14.9928 0.214511C14.8729 0.157256 14.742 0.126874 14.6091 0.125488H0.993077C0.857779 0.127675 0.72461 0.159542 0.60298 0.218842C0.481349 0.278141 0.374223 0.363425 0.289168 0.468668L0.285269 0.464768C0.101258 0.677668 0 0.949673 0 1.23107C0 1.51247 0.101258 1.78448 0.285269 1.99738L7.10792 9.55708C7.19285 9.65665 7.29838 9.7366 7.41721 9.79142C7.53605 9.84624 7.66536 9.87464 7.79623 9.87464C7.9271 9.87464 8.05641 9.84624 8.17524 9.79142C8.29407 9.7366 8.3996 9.65665 8.48454 9.55708Z"
-                      fill="white"
-                    />
-                  </svg>
-                </li>
-
-                {showDevBoostOption ? (
-                  <>
-                    <li className="mt-2">
-                      <Link href="/solutions/case-study/1">
-                        <p className="font-inter text-[16px]">one</p>
-                      </Link>
-                    </li>
-                    <li className="mt-1">
-                      <Link href="/solutions/case-study/2">
-                        <p className="font-inter text-[16px]">two</p>
-                      </Link>
-                    </li>
-                  </>
-                ) : (
-                  ""
-                )}
-              </ul>
-            </li>
+                  {openDropdown === "devBoost" && (
+                    <ul className="text-white py-2 pl-16 mt-0">
+                      <li className="mt-2">
+                        <Link href="/engineering-lead">
+                          <p className="font-inter text-[16px]">
+                            Engineering Lead
+                          </p>
+                        </Link>
+                      </li>
+                      <li className="mt-2">
+                        <Link href="/project-manager">
+                          <p className="font-inter text-[16px]">
+                            Project Manager
+                          </p>
+                        </Link>
+                      </li>
+                      <li className="mt-2">
+                        <Link href="/team-leader">
+                          <p className="font-inter text-[16px]">Team Leader</p>
+                        </Link>
+                      </li>
+                    </ul>
+                  )}
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
             <li>
               <Link href="/pricing">
-                <p className="text-[18px] font-inter border-b boder-[#777777] pb-2 mt-[28px]">
+                <p
+                  className={`text-[18px] ${
+                    activeMenuItem === "/pricing"
+                      ? "text-[#00ffba] font-semibold"
+                      : "text-white font-normal"
+                  } font-inter border-b border-[#777777] pb-2 mt-[28px]`}
+                >
                   Pricing
                 </p>
               </Link>
             </li>
-            <li
-              className="flex justify-between items-center relative border-b boder-[#777777] pb-2 mt-[28px] w-full "
-              onClick={() => {
-                setShowCompanyOption((prevState) => !prevState);
-              }}
-            >
-              <button className="text-[18px] font-inter ">Company</button>
-
-              <svg
-                width="16"
-                height="10"
-                viewBox="0 0 16 10"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+            <div className="relative">
+              <div
+                className="flex justify-between items-center border-b border-[#777777] pb-2 mt-[28px] w-full"
+                onClick={toggleCompanyOptions}
               >
-                <path
-                  d="M8.48454 9.43159C8.49429 9.4199 8.49819 9.4043 8.50794 9.3926L15.315 1.87189C15.6952 1.44876 15.6952 0.762405 15.315 0.33928C15.3111 0.33538 15.3072 0.333431 15.3033 0.331481C15.2187 0.229025 15.1127 0.146277 14.9928 0.0890225C14.8729 0.0317675 14.742 0.00138577 14.6091 0H0.993077C0.857779 0.00218624 0.72461 0.0340542 0.60298 0.0933534C0.481349 0.152653 0.374223 0.237937 0.289168 0.34318L0.285269 0.33928C0.101258 0.552179 0 0.824184 0 1.10558C0 1.38699 0.101258 1.65899 0.285269 1.87189L7.10792 9.43159C7.19285 9.53116 7.29838 9.61111 7.41721 9.66593C7.53605 9.72076 7.66536 9.74915 7.79623 9.74915C7.9271 9.74915 8.05641 9.72076 8.17524 9.66593C8.29407 9.61111 8.3996 9.53116 8.48454 9.43159Z"
-                  fill="#1FFFA3"
-                />
-              </svg>
-            </li>
-            <ul
-              className={`  text-white rounded-md  py-2 pl-16 mt-2 ${
-                showCompanyOption ? "block" : "hidden"
-              }`}
-            >
-              <li>
-                <Link href="/company/about-us">
-                  <p className="text-[16px] font-inter border-b boder-[#777777] pb-2 mt-[10px]">
-                    About Us
-                  </p>
-                </Link>
-              </li>
-              <li>
-                <Link href="/company/contact-us">
-                  <p className="text-[16px] font-inter border-b boder-[#777777] pb-2 mt-[16px]">
-                    Contact Us
-                  </p>
-                </Link>
-              </li>
-            </ul>
+                <button
+                  className={`text-[18px] ${
+                    ["/about", "/contact"].includes(activeMenuItem)
+                      ? "text-[#00ffba] font-semibold"
+                      : "text-white font-normal"
+                  } font-inter`}
+                >
+                  Company
+                </button>
+
+                <img src={` ${companyOptions ? "/Images/greenDrop.svg" : "/Images/whiteDrop.svg"}`} alt="" />
+              </div>
+
+              {companyOptions && (
+                <ul className="text-white rounded-md py-2 pl-16 mt-2">
+                  <li>
+                    <Link href="about">
+                      <p
+                        className={`text-[16px] ${
+                          activeMenuItem === "/about"
+                            ? "text-[#00ffba] font-semibold"
+                            : "text-white font-normal"
+                        } font-inter border-b border-[#777777] pb-2 mt-[10px]`}
+                      >
+                        About Us
+                      </p>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="contact">
+                      <p
+                        className={`text-[16px] ${
+                          activeMenuItem === "/contact"
+                            ? "text-[#00ffba] font-semibold"
+                            : "text-white font-normal"
+                        } font-inter border-b border-[#777777] pb-2 mt-[16px]`}
+                      >
+                        Contact Us
+                      </p>
+                    </Link>
+                  </li>
+                </ul>
+              )}
+            </div>
             <li>
               <Link href="/blogs">
-                <p className="text-[18px] font-inter border-b boder-[#777777] pb-2 mt-[28px]">
+                <p
+                  className={`text-[18px] ${
+                    ["/blogs", "/blogs/new-age-practices"].includes(
+                      activeMenuItem
+                    )
+                      ? "text-[#00ffba] font-semibold"
+                      : "text-white font-normal"
+                  } font-inter border-b border-[#777777] pb-2 mt-[28px]`}
+                >
                   Blogs
                 </p>
               </Link>

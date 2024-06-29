@@ -346,15 +346,15 @@ const PricingPlan = () => {
           Plan Details
         </div>
         <div className="font-inter overflow-x-scroll sm:overflow-x-auto w-full  sm:w-full space-y-2 lg:hidden block mt-4">
-          <div className="flex justify-between items-center mb-0  py-4 px-0 w-[950px] sm:w-full text-xl font-semibold font-inter">
-            <p className="w-[335px]">Features</p>
+          <div className="flex justify-between items-center mb-0  py-4 px-0 w-[820px] sm:w-full text-xl font-semibold font-inter">
+            <p className="w-[190px]">Features</p>
             <p className="">Freemium</p>
             <p className="">Fast-Growing Teams</p>
             <p className="">Enterprises</p>
           </div>
 
           <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
-            <p className="w-[430px]">• Users (Up to)</p>
+            <p className="w-[300px]">• Users (Up to)</p>
             <div className="flex items-center space-x-[200px]">
               <img
                 src="/Images/tick.png"
@@ -374,7 +374,7 @@ const PricingPlan = () => {
             </div>
           </div>
           <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
-            <p className="w-[430px]">• DevOps metrics </p>
+            <p className="w-[300px]">• DevOps metrics </p>
             <div className="flex items-center space-x-[200px]">
               <img
                 src="/Images/tick.png"
@@ -394,7 +394,7 @@ const PricingPlan = () => {
             </div>
           </div>
           <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
-            <p className="w-[430px]">• Dora metrics </p>
+            <p className="w-[300px]">• Dora metrics </p>
             <div className="flex items-center space-x-[200px]">
               <img
                 src="/Images/tick.png"
@@ -414,7 +414,7 @@ const PricingPlan = () => {
             </div>
           </div>
           <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
-            <p className="w-[430px]">• Investment profile </p>
+            <p className="w-[300px]">• Investment profile </p>
             <div className="flex items-center space-x-[200px]">
               <img
                 src="/Images/tick.png"
@@ -434,7 +434,7 @@ const PricingPlan = () => {
             </div>
           </div>
           <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
-            <p className="w-[430px]">• Effort allocation </p>
+            <p className="w-[300px]">• Effort allocation </p>
             <div className="flex items-center space-x-[200px]">
               <img
                 src="/Images/tick.png"
@@ -454,7 +454,7 @@ const PricingPlan = () => {
             </div>
           </div>
           <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
-            <p className="w-[430px]">
+            <p className="w-[300px]">
               • Industry benchmarks <br /> reports 
             </p>
             <div className="flex items-center space-x-[200px]">
@@ -476,7 +476,7 @@ const PricingPlan = () => {
             </div>
           </div>
           <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
-            <p className="w-[430px]">
+            <p className="w-[300px]">
               • Blocker’s breakdown <br /> chart 
             </p>
             <div className="flex items-center space-x-[200px]">
@@ -498,7 +498,7 @@ const PricingPlan = () => {
             </div>
           </div>
           <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
-            <p className="w-[430px]">• Sprint analysis </p>
+            <p className="w-[300px]">• Sprint analysis </p>
             <div className="flex items-center space-x-[200px]">
               <img
                 src="/Images/tick.png"
@@ -519,7 +519,7 @@ const PricingPlan = () => {
           </div>
 
           <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
-            <p className="w-[430px]">
+            <p className="w-[300px]">
               • AI automation across <br /> delivery, collaboration, <br />{" "}
               efficiency, process, <br /> and health 
             </p>
@@ -542,7 +542,7 @@ const PricingPlan = () => {
             </div>
           </div>
           <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
-            <p className="w-[430px]">
+            <p className="w-[300px]">
               • Utilisation/ <br />
               performance Graph 
             </p>
@@ -565,7 +565,7 @@ const PricingPlan = () => {
             </div>
           </div>
           <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
-            <p className="w-[430px]">
+            <p className="w-[300px]">
               • Sprint prediction and <br /> analysis  
             </p>
             <div className="flex items-center space-x-[200px]">
@@ -587,7 +587,7 @@ const PricingPlan = () => {
             </div>
           </div>
           <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
-            <p className="w-[430px]">
+            <p className="w-[300px]">
               • Team engagement <br /> report 
             </p>
             <div className="flex items-center space-x-[200px]">
@@ -609,7 +609,7 @@ const PricingPlan = () => {
             </div>
           </div>
           <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
-            <p className="w-[430px]">
+            <p className="w-[300px]">
               • What If scenario <br /> mapping for project <br /> delivery
               /task delivery  
             </p>
@@ -632,7 +632,7 @@ const PricingPlan = () => {
             </div>
           </div>
           <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
-            <p className="w-[430px]">
+            <p className="w-[300px]">
               • Benchmarking team <br /> across sprints 
             </p>
             <div className="flex items-center space-x-[200px]">
@@ -654,7 +654,7 @@ const PricingPlan = () => {
             </div>
           </div>
           <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
-            <p className="w-[430px]">
+            <p className="w-[300px]">
               • Benchmarking team <br />
               on the business <br /> alignment and cost <br /> across sprints 
             </p>
@@ -677,7 +677,7 @@ const PricingPlan = () => {
             </div>
           </div>
           <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
-            <p className="w-[430px]">• Email reporting  </p>
+            <p className="w-[300px]">• Email reporting  </p>
             <div className="flex items-center space-x-[200px]">
               <img
                 src="/Images/cross.png"
@@ -697,7 +697,7 @@ const PricingPlan = () => {
             </div>
           </div>
           <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
-            <p className="w-[430px]">
+            <p className="w-[300px]">
               • Intelligent <br /> recommendations    
             </p>
             <div className="flex items-center space-x-[200px]">
@@ -719,7 +719,7 @@ const PricingPlan = () => {
             </div>
           </div>
           <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
-            <p className="w-[430px]">
+            <p className="w-[300px]">
               • Customer support and <br /> handholding 
             </p>
             <div className="flex items-center space-x-[200px]">

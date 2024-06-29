@@ -5,7 +5,7 @@ const DevBoostIntegration = () => {
     <div className="wtColor lg:px-20 px-5 lg:py-24 py-20 h-[565px] lg:mt-[156px] mt-20">
       <div className=" relative  max-container">
         <h1 className="font-inter font-normal lg:text-[48px] text-[28px] lg:leading-[58px] leading-[36px] lg:text-center text-white">
-          DevBoost <span className="font-semibold">Seamlessly Integrates</span> <br /> With Your Existing Tools
+          DevBoost <span className="font-semibold">Seamlessly Integrates</span> <br className="lg:block hidden"/> With Your Existing Tools
         </h1>
         <div className=" lg:px-40">
           <img src="/Images/icon1.png" alt="icon1" className="absolute lg:top-20 lg:left-[7%] top-[160px] left-[0%] lg:w-auto w-[44px]" />

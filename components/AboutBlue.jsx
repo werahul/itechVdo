@@ -97,7 +97,7 @@ const AboutBlue = () => {
           TAKING ENGINEERING INTELLIGENCE <br />
           TO THE NEXT LEVEL
         </p>
-        <p className="font-inter font-normal lg:text-[18px] text-[16px] leading-[23.4px] text-[#ffffff] text-center mt-5">
+        <p className="font-inter font-normal lg:text-[18px] text-[16px] leading-[23.4px] text-[#ffffff] text-center  mt-5">
           Our dedicated team is empowering Engineering Leaders with cutting-edge{" "}
           <br />
           analytics and enabling them to make efficient business decisions.
@@ -110,7 +110,7 @@ const AboutBlue = () => {
       </div>
       <div className="max-container">
         <div className="lg:flex items-center lg:px-20 px-5 lg:space-x-20 lg:py-[156px] py-10">
-          <div className="lg:w-[50%]">
+          <div className="lg:w-[50%] lg:mt-0 mt-10">
             <p className="font-inter lg:text-[48px] text-[28px] text-[#000049]">
               Our <span className="font-semibold"> Story </span>
             </p>
@@ -136,7 +136,7 @@ const AboutBlue = () => {
               <img
                 src="/Images/playBtn.png"
                 alt="Play Button"
-                className="z-10 lg:w-[80px] w-[40px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+                className="z-10 lg:w-[80px] lg:block hidden w-[40px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
                 onClick={handlePlayPause}
               />
             )}
@@ -153,11 +153,16 @@ const AboutBlue = () => {
 
           <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-x-6 lg:gap-y-0 gap-y-6 lg:mt-10 mt-7">
             <div className="w-full  border-2 border-[#8F2758] bg-[#8F2758] rounded-[8px] lg:flex ">
-              <div className="bg-gray-300 lg:w-[263px] w-full">
+              <div className="bg-gray-300 lg:w-[263px] w-full lg:rounded-tl-lg lg:rounded-bl-lg lg:rounded-tr-none  rounded-tl-lg rounded-tr-lg ">
                 <img
                   src="/Images/tushar.png"
                   alt=""
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover lg:block hidden"
+                />
+                <img
+                  src="/Images/tusharMobile.png"
+                  alt=""
+                  className="w-full h-full object-cover lg:hidden block rounded-t-lg"
                 />
               </div>
               <div className=" lg:w-[70%] lg:p-7 p-4 ">
@@ -192,18 +197,23 @@ const AboutBlue = () => {
               </div>
             </div>
             <div className="w-full  border-2 border-[#004C3F] bg-[#004C3F] rounded-[8px] lg:flex ">
-              <div className="bg-gray-300 lg:w-[263px] w-full">
+              <div className="bg-gray-300 lg:w-[263px] w-full lg:rounded-tl-lg lg:rounded-bl-lg lg:rounded-tr-none  rounded-tl-lg rounded-tr-lg ">
                 <img
                   src="/Images/aninda.png"
                   alt=""
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover lg:block hidden"
+                />
+                <img
+                  src="/Images/anindaMobile.png"
+                  alt=""
+                  className="w-full h-full object-cover lg:hidden block rounded-t-lg"
                 />
               </div>
               <div className=" lg:w-[70%] lg:p-7 p-4">
                 <div className="flex items-start justify-between">
                   <div className=" lg:pb-0 pb-2">
                     <p className=" font-inter font-semibold text-[24px] text-white ">
-                      Aninda
+                    Aninda Mukherjee
                     </p>
                     <p className=" font-inter text-[16px] text-white">
                       Co-Founder, Director, COO, CPTO
