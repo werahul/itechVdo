@@ -124,7 +124,7 @@ const ContactBlue = () => {
                   </div>
                 </div>
               </div>
-              <div className="lg:mt-[100px] mt-[30px]">
+              <div className="lg:mt-[180px] mt-[30px]">
                 <img src="/Images/contactImg.png" alt="contact" />
               </div>
             </div>
@@ -174,18 +174,24 @@ const ContactBlue = () => {
                     <p className="font-inter text-[#000049] mb-2 text-[18px]">
                       What are you looking for?
                     </p>
-                    <select
-                      name="option"
-                      value={formData.option}
-                      onChange={handleChange}
-                      className="border font-inter lg:text-[16px] text-[#000049] text-[14px] px-5 placeholder-[#000049] border-[#000049] rounded-[8px] lg:h-[64px] h-[48px] w-full"
-                    >
-                      <option value="" disabled selected>
-                        Select an option
-                      </option>
-                      <option value="request-demo">Request A Demo</option>
-                      <option value="start-free">Start for Free</option>
-                    </select>
+                    <div className="custom-select-wrapper">
+                      <select
+                        name="option"
+                        value={formData.option}
+                        onChange={handleChange}
+                        className="custom-select border font-inter lg:text-[16px] text-[#000049] text-[14px] px-5 placeholder-[#000049] border-[#000049] rounded-[8px] lg:h-[64px] h-[48px] w-full"
+                      >
+                        <option value="" disabled selected>
+                          Select an option
+                        </option>
+                        <option value="request-demo">Request A Demo</option>
+                        <option value="start-free">Start for Free</option>
+                      </select>
+                      <img
+                        src="Images/downFaqIcon.png"
+                        className="custom-select-arrow lg:w-[18px] w-[13px]"
+                      />
+                    </div>
                   </div>
                   <div>
                     <p className="font-inter text-[#000049] mb-2 text-[18px]">

@@ -122,7 +122,7 @@ const AboutBlue = () => {
               and quality.
             </p>
           </div>
-          <div className="lg:w-[50%] flex items-start justify-center max-container">
+          <div className="lg:w-[50%] flex items-start justify-center max-container lg:mt-0 mt-5">
           <div className="videoSec w-full h-auto rounded-[10px] relative">
             <video
               ref={videoRef}
@@ -136,7 +136,7 @@ const AboutBlue = () => {
               <img
                 src="/Images/playBtn.png"
                 alt="Play Button"
-                className="z-10 w-[80px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+                className="z-10 lg:w-[80px] w-[40px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
                 onClick={handlePlayPause}
               />
             )}

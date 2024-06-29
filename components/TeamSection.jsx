@@ -111,7 +111,7 @@ const TeamSection = () => {
             <img src={member.image} alt={member.name} className="team-image lg:w-auto w-[264px] h-[316px] " />
             <div className="info-box">
               <div className="">
-                <p className="font-inter font-semibold text-[#000049] text-[20px]">
+                <p className="font-inter font-semibold text-[#000049] text-[20px] whitespace-nowrap">
                   {member.name}
                 </p>
                 <p className="font-inter text-[#000049] text-[14px] whitespace-nowrap">

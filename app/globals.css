@@ -340,8 +340,8 @@
   border-radius: 8px;
   position: absolute;
   bottom: 40px;
-  padding: 10px 20px;
-  width: 260px;
+  padding: 10px 10px;
+  width: 250px;
   align-items: center;
   justify-content: space-between;
 }
@@ -548,6 +548,23 @@
   box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
   
 }
-.cupa{
+.custom-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select {
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none; /* Remove default arrow for Safari */
+  -moz-appearance: none; /* Remove default arrow for Firefox */
+  padding-right: 40px; /* Add some space for the custom arrow */
+}
+
+.custom-select-arrow {
+  position: absolute;
+  right: 15px; /* Adjust based on your needs */
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevent the image from blocking the select */
   
 }
