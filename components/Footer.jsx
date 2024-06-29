@@ -16,14 +16,14 @@ const Footer = () => {
             <div className="flex space-x-4 mt-2">
               <a href="#" aria-label="Facebook">
                 <img
-                  src="/Images/fbIcon.png"
+                  src="/Images/fbIcon.svg"
                   alt="Facebook"
                   className="lg:w-[30px] lg:h-[30px] w-[24px] h-[24px]"
                 />
               </a>
               <a href="#" aria-label="Instagram">
                 <img
-                  src="/Images/instaIcon.png"
+                  src="/Images/instaIcon.svg"
                   alt="Instagram"
                   className="lg:w-[30px] lg:h-[30px] w-[24px] h-[24px]"
                 />
