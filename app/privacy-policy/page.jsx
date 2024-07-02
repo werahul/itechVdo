@@ -14,7 +14,7 @@ const Page = () => {
       <Navbar />
       <NavbarMobile/>
       <section>
-        <div className="pricingBg w-full lg:h-[580px] h-[205px] lg:rounded-b-[80px] rounded-b-[80px] lg:px-20 px-5 lg:pt-[300px] pt-[50px] z-10 ">
+        <div className="pricingBg w-full lg:h-[580px] h-[205px] lg:rounded-b-[80px] rounded-b-[40px] lg:px-20 px-5 lg:pt-[300px] pt-[50px] z-10 ">
           <p className="tracking-wide font-normal font-flyHead lg:text-[64px] lg:leading-[74px] text-[32px] leading-[42px] text-[#ffffff] text-center uppercase">
             Privacy Policy
           </p>

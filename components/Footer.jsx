@@ -41,9 +41,9 @@ const Footer = () => {
                   <li className="mb-2 hover:text-[#1FFFA3]">
                     <Link href="/pricing">Pricing</Link>
                   </li>
-                  <li className="mb-2 hover:text-[#1FFFA3]">
+                  {/*<li className="mb-2 hover:text-[#1FFFA3]">
                     <Link href="/blogs">Blog</Link>
-                  </li>
+                  </li>*/}
                 </ul>
               </div>
               <div className="w-full mb-6 md:mb-0">
@@ -61,7 +61,7 @@ const Footer = () => {
             <div className="flex flex-row justify-between lg:space-x-24 space-x-10 lg:mt-0 mt-[20px]">
               <div className="w-full mb-6 md:mb-0">
                 <h3 className="lg:text-[24px] text-[20px] font-semibold mb-4">
-                  Solutions For
+                  Use Cases For
                 </h3>
                 <ul className="lg:text-[18px] text-[16px] opacity-90">
                   <li className="mb-2 hover:text-[#1FFFA3]">
@@ -76,7 +76,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="w-full mb-6 md:mb-0">
-                <h3 className="lg:text-[24px] text-[20px] font-semibold mb-4">Case Studies</h3>
+                <h3 className="lg:text-[24px] text-[20px] font-semibold mb-4">Case Study</h3>
                 <ul className="lg:text-[18px] text-[16px] opacity-90">
                   <li className="mb-2 hover:text-[#1FFFA3]">
                     <Link href="case-study-one">Case Study 1</Link>

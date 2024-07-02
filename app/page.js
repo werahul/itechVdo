@@ -23,7 +23,7 @@ const Page = () => {
       <HomeHolisticView/>
       <DevBoostIntegration/>
       <TestimonialSlider/>
-      <HomeBlogs/>
+      {/*<HomeBlogs/>*/}
       <Cta/>
       <Footer/>
     </div>

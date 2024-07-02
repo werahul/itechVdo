@@ -280,12 +280,12 @@ const HomeBlue = () => {
                   </p>
                 </div>
                 <Link href="/product">
-                  <button className="ml-6 bg-[#1FFFA3] hover:bg-transparent border hover:border-[#000049] rounded-[8px] w-[243px] h-[56px] font-bold text-[20px] text-[#000049] mt-10">
+                  <button className="lg:ml-6 bg-[#1FFFA3] hover:bg-transparent border hover:border-[#000049] rounded-[8px] lg:w-[243px] w-full h-[56px] font-bold text-[20px] text-[#000049] mt-10">
                     Tour The Product
                   </button>
                 </Link>
               </div>
-              <div class="gradient-circle3"></div>
+              <div className="gradient-circle3"></div>
             </div>
 
             <div className="lg:px-0 px-0">

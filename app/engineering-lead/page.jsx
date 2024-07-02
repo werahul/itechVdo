@@ -167,8 +167,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="gradient-circle2 lg:block hidden"></div>
-              <div class="gradient-circle3 lg:hidden block"></div>
+              <div className="gradient-circle2 lg:block hidden"></div>
+              <div className="gradient-circle3 lg:hidden block"></div>
             </div>
 
             <div className="lg:flex flex-row-reverse items-center lg:space-x-5 relative">
@@ -194,8 +194,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="gradient-circle lg:block hidden"></div>
-              <div class="gradient-circle3 lg:hidden block"></div>
+              <div className="gradient-circle lg:block hidden"></div>
+              <div className="gradient-circle3 lg:hidden block"></div>
             </div>
 
             <div className="lg:flex items-center lg:space-x-5 relative
@@ -222,8 +222,8 @@ const Page = () => {
                   </p>
                 </div>
               </div>
-              <div class="gradient-circle2 lg:block hidden"></div>
-              <div class="gradient-circle3 lg:hidden block"></div>
+              <div className="gradient-circle2 lg:block hidden"></div>
+              <div className="gradient-circle3 lg:hidden block"></div>
             </div>
           </div>
         </section>

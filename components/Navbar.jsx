@@ -476,7 +476,7 @@ const Navbar = () => {
               )}
             </div>
 
-            <div className="relative">
+            {/*<div className="relative">
               <li className="text-white hover:text-[#00ffba] p-4 lg:p-0 text-center">
                 <Link href="/blogs">
                   <p
@@ -501,7 +501,7 @@ const Navbar = () => {
                   />
                 </div>
               )}
-            </div>
+            </div>*/}
           </ul>
           <div>
             <Link href="/contact">

@@ -248,7 +248,7 @@ const NavbarMobile = () => {
                 </ul>
               )}
             </div>
-            <li>
+            {/*<li>
               <Link href="/blogs">
                 <p
                   className={`text-[18px] ${
@@ -262,7 +262,7 @@ const NavbarMobile = () => {
                   Blogs
                 </p>
               </Link>
-            </li>
+            </li>*/}
             <div className="mt-10">
               <Link href="/contact">
                 <p className="border border-[#00ffba] text-[20px] rounded-[8px] w-full h-[60px] flex items-center justify-center text-[#00ffba] transition-colors hover:bg-[#00ffba] hover:text-[#0e0131] font-bold font-inter boxShadowButton glowEffect">
