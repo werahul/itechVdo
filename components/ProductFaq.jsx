@@ -113,10 +113,42 @@ const faqs = [
     ],
   },
   {
-    question:
-      "Things are working pretty well on my team and this just seems like a nice-to-have. We just don’t have the budget, time, or real need for another tool or process.",
+    question: " Things are working pretty well on my team and this just seems like a nice-to-have. We just don’t have the budget, time, or real need for another tool or process.",
     answer: [
       "Fair enough. It’s really great that things are going so well on your team. But here’s the thing, because DevBoost correlates data from several sources and automatically surfaces insight, it can shine a light on bottlenecks you didn’t even know you had. So, it can remove the “pretty” and replace it with “extremely.” As an engineering leader, you’ve got a tough job–which is really two jobs. You’ve got to drive operational excellence with a budget that is either flat or shrinking–so more headcount is probably out of the question. The only way to meet this mandate is to find inefficiency wherever it exists and improve your processes. You’ve also got to drive revenue by delivering on promises and aligning to the priorities of the business. You can only do this with data that cuts across engineering and the rest of the business. In down markets, tools that improve your existing processes and help teams scale efficiency aren’t nice to have. They are imperative.",
+    ],
+  },
+  {
+    question: "How long does setup take?",
+    answer: [
+      "Set up is easy and it only takes minutes to connect Devboost   to your exisiting DevOps products. You will need to add a connection via your exisiting OAuth access or provide an access token for Devboost  to read you lifecycle meta-data.",
+    ],
+  },
+  {
+    question: "How long until I get results?",
+    answer: [
+      "Once your exisiting tools are connected, an initial scan can take from a few minutes to a few hours depending on the size of the data. We’ll let you know when that’s done.",
+      "After that, you will immediately have access to analysis of your historic data and can start gaining insights.",
+      "Additional benefits will come over the next days, weeks and months as you continue to use insights to improve your processes and drive engineering team productivity in a developer friendly way.",
+    ],
+  },
+  {
+    question: "How much effort is needed to manage Devboost?",
+    answer: [
+      "Once connected and scans are running very little ongoing maintenance effort is needed. All analytics are run automatically and reports are updated without any additional steps required by you.",
+      "Devboost  picks up settings from your planning and repository systems such as Jira or GitHub and synchronises exiting team configurations etc. automatically across.",
+    ],
+  },
+  {
+    question: "Does it work with my tools?",
+    answer: [
+      "Devboost is designed to work with all major platform providers such as Jira/Atlassian, GitHub, GitLab and Azure DevOps, Jenkins, Trello, Travis CI , Aws Repository  and supports most of their individual lifecycle stages. Devboost supports several of those platforms at once and you can even mix different platforms for different software lifecycle stages.",
+    ],
+  },
+  {
+    question: "Can I try it to see if its right for me?",
+    answer: [
+      "Yes, please sign up for one of our free trials, or talk to us about a PoC for your Enterprise. We provide white-glove trials supported by our data engineering and productivity experts.",
     ],
   },
 ];

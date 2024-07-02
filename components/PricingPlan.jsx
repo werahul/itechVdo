@@ -152,7 +152,7 @@ const PricingPlan = () => {
               <div className="flex flex-col items-center">
                 <p className="font-inter font-semibold text-[24px] text-[#000049] ">
                   {" "}
-                  {"<10"}{" "}
+                  {">10"}{" "}
                 </p>
                 <img
                   src="/Images/tick.png"
@@ -243,7 +243,7 @@ const PricingPlan = () => {
               <div className="flex flex-col items-center">
                 <p className="font-inter font-semibold text-[24px] text-[#000049] ">
                   {" "}
-                  {"<10"}{" "}
+                  {">10"}{" "}
                 </p>
                 <img
                   src="/Images/tick.png"
@@ -354,23 +354,12 @@ const PricingPlan = () => {
           </div>
 
           <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">
-            <p className="w-[300px]">• Users (Up to)</p>
-            <div className="flex items-center space-x-[200px]">
-              <img
-                src="/Images/tick.png"
-                alt=""
-                className="w-[21px] h-[21px]"
-              />
-              <img
-                src="/Images/tick.png"
-                alt=""
-                className="w-[21px] h-[21px]"
-              />
-              <img
-                src="/Images/tick.png"
-                alt=""
-                className="w-[21px] h-[21px]"
-              />
+            <p className="w-[290px]">• Users (Up to)</p>
+            <div className="flex items-center space-x-[190px]">
+              <p className="text-[18px]">{"<10"}</p>
+              <p>{">10"}</p>
+              <p>{">10"}</p>
+              
             </div>
           </div>
           <div className="flex  items-center  py-2 px-2 pr-7 w-[950px] sm:w-full text-[18px] font-normal font-inter ">

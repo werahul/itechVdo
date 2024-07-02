@@ -128,7 +128,7 @@ const ROICalculator = () => {
           ROI Calculator
         </h2>
         <div className="lg:flex justify-between lg:space-x-10">
-          <div className="bg-white lg:w-[50%] rounded-[20px] min-h-[1100px] lg:py-[64px] py-10 lg:px-[44px] px-5 text-[#000049] mt-10">
+          <div className="bg-white lg:w-[50%] rounded-[20px] min-h-[1000px] lg:py-[64px] py-10 lg:px-[44px] px-5 text-[#000049] mt-10">
             <p className="font-inter font-bold lg:text-[32px] text-[24px] leading-[31px]">
               Enter Your Company Details
             </p>
@@ -219,17 +219,12 @@ const ROICalculator = () => {
                     onMouseEnter={() => handleMouseEnter(2)}
                     onMouseLeave={handleMouseLeave}
                   >
-                    On average, customers see a 29% increase in teams&apos;
-                    ability to focus on their most pressing work. To be
-                    conservative, we&apos;re assuming you&apos;ll only see 10%
-                    of this benefit, but you should expect to see more.
+                  On average, 4 hours per engineering manager per month. In many organizations, an engineering operations manager may also dedicate a large portion of their time to this.
                   </div>
                 )}
               </div>
               <p className="lg:text-[18px] text-[14px] lg:leading-[24px] leading-[18px] mt-2 font-inter">
-                On average, 4 hours per engineering manager per month. In many
-                organizations, an engineering operations manager may also
-                dedicate a large portion of their time to this.
+              Building custom reporting is time-consuming and resource-intensive. The result is typically too granular to drive strategic decisions or impact delivery.
               </p>
 
               <div className="lg:flex items-center lg:space-x-4 mt-8">
@@ -282,9 +277,9 @@ const ROICalculator = () => {
               </p>
             </div>
           </div>
-          <div className="bg-white lg:w-[50%] rounded-[20px] max-h-[1100px] lg:py-[64px] py-10 lg:px-[44px] px-5 text-[#000049] mt-10">
+          <div className="bg-white lg:w-[50%] rounded-[20px] max-h-[1000px] lg:py-[64px] py-10 lg:px-[44px] px-5 text-[#000049] mt-10">
             <p className="font-inter lg:text-[32px] text-[24px] font-bold">
-              Total Savings:
+            Total Annual Savings
             </p>
             <p className="font-inter lg:text-[56px] text-[36px] font-bold">
               ${" "}
@@ -350,7 +345,7 @@ const ROICalculator = () => {
                   ""
                 : "0"}
             </p>
-            <p className="font-inter lg:text-[20px] text-[16px] lg:leading-[26px] leading-[20px] mt-5">
+            {/*<p className="font-inter lg:text-[20px] text-[16px] lg:leading-[26px] leading-[20px] mt-5">
               ROI on cost
             </p>
             <p className="font-inter lg:text-[32px] text-[24px] lg:leading-[32px]  font-bold mt-2">
@@ -358,7 +353,7 @@ const ROICalculator = () => {
               {typeof roi === "number"
                 ? Math.floor(roi).toLocaleString() + " "
                 : "0 "}
-            </p>
+            </p>*/}
 
             <hr className="my-5" />
 

@@ -92,7 +92,7 @@ const Page = () => {
               <div className="lg:w-[50%]">
                 <img src="/Images/case1Vector3.png" alt="Vector3" />
               </div>
-              <div className="lg:w-[50%] lg:space-y-4 space-y-2">
+              <div className="lg:w-[50%] lg:space-y-4 space-y-2 lg:mt-0 mt-4">
                 <p className="font-inter font-semibold lg:text-[32px] lg:leading-[41px] text-[20px] leading-[30px] text-[#000049]">
                   Solutions That DevBoost Offered
                 </p>

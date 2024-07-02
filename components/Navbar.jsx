@@ -283,7 +283,7 @@ const Navbar = () => {
                             Case Study 1
                           </li>
                         </Link>
-                        <Link href="#">
+                        {/*<Link href="#">
                           <li className="py-2 text-left hover:text-[#00ffba]">
                             Case Study 2
                           </li>
@@ -292,7 +292,7 @@ const Navbar = () => {
                           <li className="py-2 text-left hover:text-[#00ffba]">
                             Case Study 3
                           </li>
-                        </Link>
+                        </Link>*/}
                       </div>
                     )}
                     <div

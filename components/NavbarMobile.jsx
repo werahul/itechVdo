@@ -121,7 +121,7 @@ const NavbarMobile = () => {
                           <p className="font-inter text-[16px]">Case Study 1</p>
                         </Link>
                       </li>
-                      <li className="mt-1">
+                      {/*<li className="mt-1">
                         <Link href="">
                           <p className="font-inter text-[16px]">Case Study 2</p>
                         </Link>
@@ -135,7 +135,7 @@ const NavbarMobile = () => {
                         <Link href="">
                           <p className="font-inter text-[16px]">Case Study 4</p>
                         </Link>
-                      </li>
+                      </li>*/}
                     </ul>
                   )}
                   <div

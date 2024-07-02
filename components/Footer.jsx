@@ -81,7 +81,7 @@ const Footer = () => {
                   <li className="mb-2 hover:text-[#1FFFA3]">
                     <Link href="case-study-one">Case Study 1</Link>
                   </li>
-                  <li className="mb-2 hover:text-[#1FFFA3]">
+                  {/*<li className="mb-2 hover:text-[#1FFFA3]">
                     <Link href="#">Case Study 2</Link>
                   </li>
                   <li className="mb-2 hover:text-[#1FFFA3]">
@@ -89,7 +89,7 @@ const Footer = () => {
                   </li>
                   <li className="mb-2 hover:text-[#1FFFA3]">
                     <Link href="#">Case Study 4</Link>
-                  </li>
+                  </li>*/}
                 </ul>
               </div>
             </div>
