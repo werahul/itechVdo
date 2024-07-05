@@ -71,7 +71,7 @@ const HomeBlue = () => {
           <br /> WITH DEVBOOST
         </p>
         <p className="font-inter font-normal lg:text-[18px] leading-[23.4px] text-[#ffffff] text-center mt-5">
-          DevBoost is an Ai based, Data-Driven platform for Faster, <br className="lg:block hidden"/> Smarter and Risk-Free Software Development.
+          DevBoost is an Ai based, Data-Driven platform for Faster, <br className="lg:block hidden"/> Smarter and Low Risk Software Development.
         </p>
         <div className="flex justify-center items-center">
           <Link href="/contact">
@@ -273,7 +273,7 @@ const HomeBlue = () => {
                   <li className="lg:text-[18px] text-[16px] lg:leading-[27px] leading-[24px] text-[#000049] list-disc"></li>
                   <p className="font-inter lg:text-[18px] text-[16px] lg:leading-[27px] leading-[24px] text-[#000049] list-disc">
                     It correlates multiple signals from various tools and
-                    provides
+                    provides {" "}
                     <span className="font-semibold">
                       accurate health risks.
                     </span>
