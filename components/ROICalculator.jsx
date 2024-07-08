@@ -132,7 +132,7 @@ const ROICalculator = () => {
           ROI Calculator
         </h2>
         <div className="lg:flex justify-between lg:space-x-10">
-          <div className="bg-white lg:w-[50%] rounded-[20px] min-h-[1000px] lg:py-[64px] py-10 lg:px-[44px] px-5 text-[#000049] mt-10">
+          <div className="bg-white lg:w-[50%] rounded-[20px] min-h-[1040px] lg:py-[64px] py-10 lg:px-[44px] px-5 text-[#000049] mt-10">
             <p className="font-inter font-bold lg:text-[32px] text-[24px] leading-[31px]">
               Enter Your Company Details
             </p>
@@ -291,7 +291,7 @@ const ROICalculator = () => {
               </p>
             </div>
           </div>
-          <div className="bg-white lg:w-[50%] rounded-[20px] max-h-[1000px] lg:py-[64px] py-10 lg:px-[44px] px-5 text-[#000049] mt-10">
+          <div className="bg-white lg:w-[50%] rounded-[20px] max-h-[1040px] lg:py-[64px] py-10 lg:px-[44px] px-5 text-[#000049] mt-10">
             <p className="font-inter lg:text-[32px] text-[24px] font-bold">
               Total Annual Savings
             </p>
